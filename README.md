@@ -4,6 +4,21 @@
 npm create astro@latest -- --template basics
 ```
 
+## Stack Selection
+Astro for:
+- Static website generation for cheap hosting
+- Templating of 
+
+AWS for:
+- Static website hosting with S3 and Cloudfront
+- 
+
+GitHub Actions:
+- For PDF generation of resume upon code updates
+
+Tailwind for:
+- Styling and other utilities
+
 ## Utilities Used
 - AstroJS for static site generation
 - Tailwind CSS for design utility classes
