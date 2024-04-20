@@ -119,3 +119,22 @@ accomplishments:
     - name: Thrivent Leadership Training
       bullets:
         - Selected as one of thirty within Thrivent for first program offering.
+
+skills: 
+  heading: Skills
+  icon: bi-file-code-fill
+  callout: 
+    - name: Software Development
+      items:
+        - R Package Development
+        - Python
+    - name: Data Engineering
+      items:
+          - Columnar databases
+          - Parallel processing
+          - Query optimization
+          - Modeling (OLTP/OLAP)
+          - ETL Tools (Markit EDM)
+    - name: Related
+      items:
+        - AWS
