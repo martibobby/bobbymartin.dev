@@ -1,0 +1,13 @@
+title: Bobby Martin
+href: /
+icon: bi-code-square
+menu:
+  - name: Home
+    href: /
+  - name: Resume
+    href: /resume
+  - name: About
+    href: /about
+right:
+  - icon: bi-github
+  - ref: github.com/martibobby

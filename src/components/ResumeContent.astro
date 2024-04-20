@@ -1,0 +1,72 @@
+---
+import ResumeContentTimeline from "./ResumeContentTimeline.astro"
+
+import content from "../data/resume.yml"
+---
+<div class="md:container mb-2 md:mx-auto flex flex-col border-2">
+    <!-- Header -->
+    <div class="flex self-center items-center w-full">
+        <div class="flex w-full items-center justify-between">
+            <div>
+                <!-- Identify yourself -->
+                <h1 class="text-4xl mb-2 font-semibold leading-none dark:text-white">{content.name}</h1>
+                <!-- Objective Quote Callout -->
+                <!-- Badges -->
+                <div class="flex flex-row">
+                    {content.badge.map((item) => (
+                        <img alt={item.alt} src={item.src}> 
+                    ))}
+                </div>
+            </div>
+            <blockquote class="p-2 ml-4 my-2 border-x-2 border-sky-700">
+                <p class="text-base font-medium text-gray-900/50 dark:text-white">{content.objective}</p>
+            </blockquote>
+            <!-- Contact -->
+            <section class="d-flex flex-column align-items-center">
+                {content.contact.map((item) => (
+                    <p class="dark:text-white">
+                        <i class={item.icon}></i> {item.value}
+                        </p>
+                ))}
+            </section>
+        </div>
+    </div>
+
+    <!-- Experience / Timeline -->
+    <h2 class="text-3xl text-sky-700 mt-6 dark:text-blue-800">
+        <i class={content.experience.icon}></i> {content.experience.heading}
+    </h2>
+    <div class="grid grid-cols-4 gap-x-8 gap-y-4 m-6">
+        {content.experience.timeline.map((item) => (
+        <div class="justify-self-end">
+            <h3 class="text-xl dark:text-blue-800">{item.company}</h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400">{item.dates}</p>
+        </div>
+        <div class="col-span-3">
+            <h3 class="text-xl dark:text-blue-800">{item.title}
+                <small class="font-thin text-gray-500 dark:text-gray-400">
+                    {item.subtitle}
+                </small>
+            </h3>
+            <ul class="list-disc ml-6">
+                 {item.bullets.map((item) => (
+                     <li class="dark:text-white">{item}</li>
+                 ))}
+             </ul>
+        </div>
+        ))}
+    </div>
+
+    <!-- Education / Skills -->
+    <div>
+        <h2 class="text-3xl text-sky-700 mt-6 dark:text-blue-800">
+            <i class={content.education.icon}></i> 
+            {content.education.heading}
+        </h2>
+        <div class="grid grid-cols-4 gap-x-8 gap-y-4 m-6">
+            {content.education.degrees.map((degree) => (
+                <p>{degree.uni}</p>
+            ))}
+        </div>
+    </div>
+</div>

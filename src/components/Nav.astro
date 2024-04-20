@@ -1,0 +1,31 @@
+---
+import ThemeToggle from "./ThemeToggle.astro"
+import content from "../data/nav.yml"
+
+---
+
+<nav class="grid grid-cols-3 py-8 w-full md:container md:mx-auto">
+	<div class="self-center">
+		<!-- Left Logo text -->
+		<a href={content.href} class="">
+			<span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+				<i class={content.icon}></i>
+				{content.title}</span>
+		</a>
+	</div>
+
+	<!-- Navigation Menu Links -->
+	<div class="place-self-center flex">
+		<div class="font-medium p-4 md:p-0 mt-4 rounded-lg md:space-x-8 rtl:space-x-reverse md:mt-0 dark:text-white">
+			{content.menu.map((item) => (
+					<a href={item.href}>{item.name}</a>
+			))}
+		</div>
+	</div>
+
+
+	<!-- Right links - theme toggle & GitHub -->
+	<div class="place-self-end">
+		<ThemeToggle />
+	</div>
+  </nav>

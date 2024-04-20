@@ -1,0 +1,65 @@
+---
+
+import Nav from '../components/Nav.astro';
+import MainHead from '../components/MainHead.astro';
+
+// import '@fontsource/quattrocento';
+// import '@fontsource/questrial';
+import '@fontsource/fraunces'; // header text
+import '@fontsource/poppins'; // body text
+
+interface Props {
+	title?: string | undefined;
+	description?: string | undefined;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<!-- Base head component -->
+	<head>
+		<MainHead title={title} description={description} />
+	</head>
+	<body class="bg-white dark:bg-[#121212]">
+		<Nav />
+		<slot />
+	</body>
+</html>
+<style is:global>
+	h1, h2, h3, h4, h5 {
+		font-family: "fraunces";
+	}
+	
+</style>
+
+<!-- <style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151a;
+		background-size: 224px;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+</style> -->

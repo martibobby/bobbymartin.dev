@@ -1,0 +1,104 @@
+name: Bobby Martin
+
+objective: Architecting data solutions to maximize business value.
+
+badge:
+  - src: https://img.shields.io/badge/years_of_experience-5-blue
+    alt: Static Badge
+  - src: https://img.shields.io/badge/sha-5928373-blue
+    alt: Git commit sha for the resume version
+
+contact:
+  - name: email
+    value: bobby@bob4thejob.com
+    icon: bi-envelope
+    href: "mailto:bobby@bob4thejob.com"
+  - name: address
+    value: 123 Main Street, Minneapolis, MN, 55401
+    icon: bi-house
+  - name: phone
+    value: 123-456-7890
+    icon: bi-telephone-inbound
+
+experience:
+  heading: Experience
+  icon: bi-briefcase-fill
+  timeline:
+    - company: Thrivent Financial
+      title: Senior Application Engineer
+      subtitle: Systematic Alpha Quant Team
+      dates: "May 2022 - present"
+      bullets:
+        - Maintainer and primary contributor of `invquantr` - a proprietary R package for factor building, data extraction, etc...
+        - Created 
+        - Migrated team from SVN->Git (Bitbucket -> GitHub)
+    - company: 
+      title: Application Engineer
+      subtitle: Systematic Alpha Quant Team
+      dates: "January 2020 - May 2022"
+      bullets:
+        - Implemented operating model transition to federated development; empowered 3 internal teams and 5 external contractors to align Master Data Management (MDM) development with business interests.
+        - Evaluated, advocated for, and integrated a CI/CD pipeline mitigating deploy risks while increasing production migrations by 350% in the first year.
+        - Stabilized the MDM Engineering practice through clearly defined technical architecture and creation of a Community of Practice amongst engineers. Served as the primary MDM Technical Architect.
+    - company: 
+      title: Associate Application Engineer
+      subtitle: Investments Data Hub Team
+      dates: "May 2018- January 2020"
+      bullets: 
+        - Designed, developed, and deployed thriventprivateinvestments.com on AWS with S3 and CloudFront.
+        - Architected Power BI workspace implementation delivering self-service analytics to internal groups.
+        - Engineered and maintained critical internal/vendor systems for post-trade activity and reporting.
+    - company: City of St. Paul
+      title: Web Assistant Intern
+      subtitle:
+      dates: "June 2017 - May 2018"
+      bullets: 
+        - Identified process redundancy and eliminated through custom Microsoft Powerapp.
+        - Leveraged Drupal, HTML/SCSS, and GIT to improve stpaul.gov.
+
+    - company: Risk Leadership Initiative
+      title: Product Developer
+      subtitle:
+      dates: "June 2016 - May 2018"
+      bullets: 
+        - Drafted, designed, and launched new website with email campaigns that resulted in over 3500 new connections over 6 months. Strategized email content from metrics gathered on user engagement.
+
+    - company: University of St. Thomas
+      title: Teacher's Assistant
+      subtitle: Mary Daugherty, CFA. Senior Fellow in Applied Finance
+      dates: "May 2015 - May 2018"
+      bullets: 
+        - Researched and synthesized findings from Bloomberg terminal on over 200 companies with foreign assets and subsequent tax implications.
+
+    - company: 
+      title: Web Developer & Managing Intern
+      subtitle: Mary Daugherty, CFA. Senior Fellow in Applied Finance
+      dates: "Sept. 2014 - Jan 2018"
+      bullets: 
+        - Assessed client vision and provided best-practices for over 80 departments to create concepts into functional website/email solutions. Promoted to manage a team of 7.
+
+    - company: Freelance
+      title: Technology Consultant
+      subtitle: Creative Hair Design, Handy Help, Ask the Nuns, Christina Capecchi
+      dates: "May 2014 - December 2017"
+      bullets: 
+        - Developed unique brands, websites, and targeted email campaigns for MN-based groups.
+        - Implemented and maintained customer database of over 2000 clients.
+
+education:
+  heading: Education
+  icon: bi-mortarboard-fill
+  degrees:
+    - uni: University of St. Thomas
+      class: Class of 2018
+      major: Political Science and Information Systems
+      subtitle: double-major
+      callout:
+        - name: Honors
+          bullets:
+            - Full scholarship recipient. Dean's List 6 semesters.
+            - H.W. Ross Political Science Scholarship.
+        - name: Leadership
+          bullets:
+            - VP of Public Relations, Student Government.
+            - Consul (President), Sigma Chi Fraternity.
