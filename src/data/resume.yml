@@ -102,3 +102,20 @@ education:
           bullets:
             - VP of Public Relations, Student Government.
             - Consul (President), Sigma Chi Fraternity.
+
+accomplishments:
+  heading: Accomplishments
+  icon: bi-trophy-fill
+  callout:
+    - name: Boy Scouts of America
+      bullets: 
+        - Eagle Scout, 2014.
+        - Assistant Scoutmaster, 2018, 80 youth scouts. 
+    - name: Certifications
+      bullets:
+        - Certified Scrum Product Owner (CSPO).
+        - Markit EDM - Basic & Advanced Training.
+        - Bloomberg Market Concepts.
+    - name: Thrivent Leadership Training
+      bullets:
+        - Selected as one of thirty within Thrivent for first program offering.
