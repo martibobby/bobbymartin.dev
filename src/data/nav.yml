@@ -3,9 +3,9 @@ href: /
 icon: bi-code-square
 menu:
   - name: Home
-    href: /
+    href: ./index.html
   - name: Resume
-    href: /resume
+    href: ./resume/index.html
   # - name: About
   #   href: /about
 right:

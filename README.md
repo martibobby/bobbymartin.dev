@@ -22,6 +22,10 @@ Tailwind for:
 > Perfection is the enemy of good
 
 My first Astro, Tailwind, project!
+
+## Resume PDF Generation
+`node scripts/pdf.cjs`
+
 ## Utilities Used
 - AstroJS for static site generation
 - Tailwind CSS for design utility classes
