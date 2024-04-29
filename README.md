@@ -19,6 +19,9 @@ GitHub Actions:
 Tailwind for:
 - Styling and other utilities
 
+> Perfection is the enemy of good
+
+My first Astro, Tailwind, project!
 ## Utilities Used
 - AstroJS for static site generation
 - Tailwind CSS for design utility classes

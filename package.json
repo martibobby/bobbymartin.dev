@@ -21,6 +21,7 @@
     "@fontsource/questrial": "^5.0.12",
     "astro": "^4.5.16",
     "flowbite": "^2.3.0",
+    "puppeteer": "^22.6.5",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.4"
   },

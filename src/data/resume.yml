@@ -10,15 +10,16 @@ badge:
 
 contact:
   - name: email
-    value: bobby@bob4thejob.com
+    value: bobby@bobbymartin.dev
     icon: bi-envelope
-    href: "mailto:bobby@bob4thejob.com"
+    href: "mailto:bobby@bobbymartin.dev"
   - name: address
-    value: 123 Main Street, Minneapolis, MN, 55401
-    icon: bi-house
-  - name: phone
-    value: 123-456-7890
-    icon: bi-telephone-inbound
+    value: Minneapolis, Minnesota
+    icon: bi-geo-fill
+  - name: github
+    value: martibobby
+    icon: bi-github
+    href: "https://github.com/martibobby"
 
 experience:
   heading: Experience
