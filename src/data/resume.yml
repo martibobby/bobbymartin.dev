@@ -3,7 +3,7 @@ name: Bobby Martin
 objective: Architecting data solutions to maximize business value.
 
 badge:
-  - src: https://img.shields.io/badge/years_of_experience-5-blue
+  - src: https://img.shields.io/badge/version-1-blue
     alt: Static Badge
   - src: https://img.shields.io/badge/sha-5928373-blue
     alt: Git commit sha for the resume version

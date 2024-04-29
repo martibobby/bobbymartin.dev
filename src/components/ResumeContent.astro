@@ -1,51 +1,51 @@
 ---
 import content from "../data/resume.yml"
 ---
-<div class="md:container mb-2 md:mx-auto flex flex-col border-2">
+<div class="flex flex-col m-auto">
     <!-- Header -->
-    <div class="flex self-center items-center w-full">
-        <div class="flex w-full items-center justify-between">
-            <div>
-                <!-- Identify yourself -->
-                <h1 class="text-4xl mb-2 font-semibold leading-none dark:text-white">{content.name}</h1>
-                <!-- Objective Quote Callout -->
-                <!-- Badges -->
-                <div class="flex flex-row">
-                    {content.badge.map((item) => (
-                        <img alt={item.alt} src={item.src}> 
-                    ))}
-                </div>
-            </div>
-            <blockquote class="p-2 ml-4 my-2 border-x-2 border-sky-700">
-                <p class="text-base font-medium text-gray-900/50 dark:text-white">{content.objective}</p>
-            </blockquote>
-            <!-- Contact -->
-            <section class="d-flex flex-column align-items-center">
-                {content.contact.map((item) => (
-                    <p class="dark:text-white">
-                        <i class={item.icon}></i> {item.value}
-                        </p>
+    <div class="flex flex-wrap items-center md:justify-between">
+        <!-- Identify yourself -->
+        <div>
+            <h1 class="text-4xl mb-2 font-semibold leading-none dark:text-white">{content.name}</h1>
+            <!-- Objective Quote Callout -->
+            <!-- Badges -->
+            <div class="flex flex-row">
+                {content.badge.map((item) => (
+                    <img alt={item.alt} src={item.src}> 
                 ))}
-            </section>
+            </div>
         </div>
+        <blockquote class="p-2 ml-4 my-2 border-x-2 border-sky-700">
+            <p class="text-base font-medium text-gray-900/50 dark:text-white">{content.objective}</p>
+        </blockquote>
+        <!-- Contact -->
+        <section class="flex flex-col align-items-center">
+            {content.contact.map((item) => (
+                <p class="hover:text-gray-900/50 dark:text-white">
+                    <i class={item.icon}></i> <a href={item.href}>{item.value}</a>
+                    </p>
+            ))}
+        </section>
     </div>
 
     <!-- Experience / Timeline -->
-    <h2 class="text-3xl text-sky-700 mt-6 dark:text-blue-800">
+    <h2 class="text-3xl text-sky-700 mt-6 dark:text-sky-700">
         <i class={content.experience.icon}></i> {content.experience.heading}
     </h2>
     <div class="grid grid-cols-4 gap-x-8 gap-y-4 m-6">
         {content.experience.timeline.map((item) => (
         <div class="justify-self-end text-right">
-            <h3 class="text-xl dark:text-blue-800">{item.company}</h3>
+            <h3 class="text-xl dark:text-sky-700">{item.company}</h3>
             <p class="text-sm text-gray-500 dark:text-gray-400">{item.dates}</p>
         </div>
         <div class="col-span-3">
-            <h3 class="text-xl dark:text-blue-800">{item.title}
-                <small class="font-thin text-gray-500 dark:text-gray-400">
+            <div class="flex gap-x-2 flex-wrap items-baseline">
+                <h3 class="text-xl dark:text-sky-700">{item.title}
+                <h4 class="font-thin text-gray-500 dark:text-gray-400">
                     {item.subtitle}
-                </small>
-            </h3>
+                </h4>
+                </h3>
+            </div>
             <ul class="list-disc ml-6">
                  {item.bullets.map((item) => (
                      <li class="dark:text-white">{item}</li>
@@ -57,18 +57,18 @@ import content from "../data/resume.yml"
 
     <!-- Education / Skills -->
     <div>
-        <h2 class="text-3xl text-sky-700 mt-6 dark:text-blue-800">
+        <h2 class="text-3xl text-sky-700 mt-6 dark:text-sky-700">
             <i class={content.education.icon}></i> 
             {content.education.heading}
         </h2>
         <div class="grid grid-cols-4 gap-x-8 gap-y-4 m-6">
             {content.education.degrees.map((item) => (
                 <div class="justify-self-end">
-                    <h3 class="text-xl dark:text-blue-800">{item.uni}</h3>
+                    <h3 class="text-xl dark:text-sky-700">{item.uni}</h3>
                     <p class="text-sm text-gray-500 dark:text-gray-400">{item.class}</p>
                 </div>
                 <div class="col-span-3">
-                    <h3 class="text-xl dark:text-blue-800">{item.major}
+                    <h3 class="text-xl dark:text-sky-700">{item.major}
                         <small class="font-thin text-gray-500 dark:text-gray-400">
                             {item.subtitle}
                         </small>
@@ -94,13 +94,13 @@ import content from "../data/resume.yml"
     <div class="flex">
         <!-- Accomplishments -->
         <div class="flex flex-col">
-            <h2 class="text-3xl text-sky-700 mt-6 dark:text-blue-800">
+            <h2 class="text-3xl text-sky-700 mt-6 dark:text-sky-700">
                 <i class={content.accomplishments.icon}></i> 
                 {content.accomplishments.heading}
             </h2>
             <div>   
                 {content.accomplishments.callout.map((item) => (
-                    <h4 class="text-xl dark:text-blue-800">{item.name}</h4>
+                    <h4 class="text-xl dark:text-sky-700">{item.name}</h4>
                     <ul class="list-none ml-6">
                         {item.bullets.map((item) => (
                             <li class="font-thin text-gray-500 dark:text-gray-400">{item}</li>
@@ -111,14 +111,14 @@ import content from "../data/resume.yml"
         </div>
         <!-- Skills -->
         <div class="w-full h-full">
-            <h2 class="text-3xl text-sky-700 mt-6 dark:text-blue-800">
+            <h2 class="text-3xl text-sky-700 mt-6 dark:text-sky-700">
                 <i class={content.skills.icon}></i> 
                 {content.skills.heading}
             </h2>
             <div class="grid grid-cols-3 justify-items-stretch gap-2 mt-2">
                     {content.skills.callout.map((item) => (
                         <div class="border-l-2 pl-2 border-sky-700">
-                            <h4 class="text-xl dark:text-blue-800">{item.name}</h4>
+                            <h4 class="text-xl dark:text-sky-700">{item.name}</h4>
                             <ul class="list-none ml-6">
                                 {item.items.map((item) => (
                                     <li class="font-thin text-gray-500 dark:text-gray-400">{item}</li>
@@ -129,5 +129,4 @@ import content from "../data/resume.yml"
             </div>
         </div>
     </div>
-
 </div>
