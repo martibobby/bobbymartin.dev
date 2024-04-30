@@ -1,17 +1,17 @@
 ---
 import content from "../data/resume.yml"
 ---
-<div class="flex flex-col m-auto">
+<div class="flex flex-col">
     <!-- Header -->
-    <div class="flex flex-wrap items-center md:justify-between">
+    <div class="flex flex-col items-center lg:flex-row lg:justify-between">
         <!-- Identify yourself -->
         <div>
             <h1 class="text-4xl mb-2 font-semibold leading-none dark:text-white">{content.name}</h1>
             <!-- Objective Quote Callout -->
             <!-- Badges -->
-            <div class="flex flex-row">
+            <div class="hidden md:flex flex-row items-center justify-center lg:justify-start">
                 {content.badge.map((item) => (
-                    <img alt={item.alt} src={item.src}> 
+                    <img alt={item.alt} src={item.src} class="width-8"> 
                 ))}
             </div>
         </div>
@@ -32,7 +32,7 @@ import content from "../data/resume.yml"
     <h2 class="text-3xl print:text-xl text-sky-700 mt-6 dark:text-sky-700">
         <i class={content.experience.icon}></i> {content.experience.heading}
     </h2>
-    <div class="grid grid-cols-4 md:gap-x-8 gap-y-2 md:gap-y-4 m-6">
+    <div class="grid grid-cols-4 gap-x-4  md:gap-x-8">
         {content.experience.timeline.map((item) => (
         <div class="justify-self-end text-right">
             <h3 class="text-xl print:text-md dark:text-sky-700">{item.company}</h3>
@@ -73,7 +73,7 @@ import content from "../data/resume.yml"
                             {item.subtitle}
                         </small>
                     </h3>
-                    <div class="flex flex-wrap items-stretch gap-x-8">
+                    <div class="flex flex-col md:flex-row items-stretch gap-x-8">
                         {item.callout.map((item) => (
                             <div>
                                 <h4 class="text-lg">{item.name}</h4>
@@ -91,9 +91,9 @@ import content from "../data/resume.yml"
     </div>
 
     <!-- Accomplishments & Skills -->
-    <div class="flex">
+    <div class="flex flex-col gap-x-4 lg:flex-row">
         <!-- Accomplishments -->
-        <div class="flex flex-col">
+        <div class="flex basis-1/2 flex-col">
             <h2 class="text-3xl print:text-xl text-sky-700 mt-6 dark:text-sky-700">
                 <i class={content.accomplishments.icon}></i> 
                 {content.accomplishments.heading}
@@ -110,7 +110,7 @@ import content from "../data/resume.yml"
             </div>
         </div>
         <!-- Skills -->
-        <div class="w-full h-full">
+        <div class="">
             <h2 class="text-3xl print:text-xl text-sky-700 mt-6 dark:text-sky-700">
                 <i class={content.skills.icon}></i> 
                 {content.skills.heading}
