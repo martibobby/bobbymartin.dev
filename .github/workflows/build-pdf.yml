@@ -1,13 +1,13 @@
 name: Build Astro site & print resume PDF
 
-on: [push]
+# on: [push]
 # runs:
 #   using: 'docker'
 #   image: 'Dockerfile'
-  # push:
-  #   branches: [ $default-branch ]
-  # pull_request:
-  #   branches: [ $default-branch ]
+push:
+  branches: [ $default-branch ]
+pull_request:
+  branches: [ $default-branch ]
 
 jobs:
   build:
@@ -27,8 +27,16 @@ jobs:
         run: npm run build
       - name: tree
         run: ls -l dist/
-      - name: check docker
-        run: docker ps & docker info
+      - name: Startup Astro server
+        run: docker compose up
+      - name: View Ports
+        run: docker ps
+      - name: Create PDF 
+        run: node scripts/pdf.cjs
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+          with:
+            path: example.pdf
   # pdf:
   #   needs: build
   #   runs-on: ubuntu-latest #ghcr.io/puppeteer/puppeteer:latest
