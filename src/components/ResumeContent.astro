@@ -3,10 +3,10 @@ import content from "../data/resume.yml"
 ---
 <div class="flex flex-col">
     <!-- Header -->
-    <div class="flex flex-col items-center lg:flex-row lg:justify-between">
+    <div class="flex flex-col items-center md:flex-row md:justify-between">
         <!-- Identify yourself -->
         <div>
-            <h1 class="text-4xl mb-2 font-semibold leading-none dark:text-white">{content.name}</h1>
+            <h1 class="text-4xl print:text-2xl mb-2 font-semibold leading-none dark:text-white">{content.name}</h1>
             <!-- Objective Quote Callout -->
             <!-- Badges -->
             <div class="hidden md:flex flex-row items-center justify-center lg:justify-start">
@@ -16,12 +16,12 @@ import content from "../data/resume.yml"
             </div>
         </div>
         <blockquote class="p-2 ml-4 my-2 border-x-2 border-sky-700">
-            <p class="text-base font-medium text-gray-900/50 dark:text-white">{content.objective}</p>
+            <p class="text-base print:text-xs print:w-50 font-medium text-gray-900/50 dark:text-white">{content.objective}</p>
         </blockquote>
         <!-- Contact -->
         <section class="flex flex-col align-items-center">
             {content.contact.map((item) => (
-                <p class="hover:text-gray-900/50 dark:text-white">
+                <p class="hover:text-gray-900/50 print:text-xs dark:text-white">
                     <i class={item.icon}></i> <a href={item.href}>{item.value}</a>
                     </p>
             ))}

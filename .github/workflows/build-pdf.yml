@@ -1,0 +1,37 @@
+name: Build Astro site & print resume PDF
+
+on: [push]
+# runs:
+#   using: 'docker'
+#   image: 'Dockerfile'
+  # push:
+  #   branches: [ $default-branch ]
+  # pull_request:
+  #   branches: [ $default-branch ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest #ghcr.io/puppeteer/puppeteer:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Install modules
+        run: npm ci
+      - name: Install dependencies
+        run: npm install
+      - name: Build application
+        run: npm run build
+      - name: tree
+        run: ls -l dist/
+      - name: check docker
+        run: docker ps & docker info
+  # pdf:
+  #   needs: build
+  #   runs-on: ubuntu-latest #ghcr.io/puppeteer/puppeteer:latest
+  #   steps: 
+  #     - name: tree
+  #       run: ls -l

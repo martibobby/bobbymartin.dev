@@ -1,3 +1,7 @@
+// 
+// npm run build
+// npm run preview
+// navigate to that site
 const puppeteer = require('puppeteer');
 
 async function generatePDF() {
