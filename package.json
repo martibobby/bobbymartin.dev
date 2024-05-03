@@ -20,7 +20,7 @@
     "@fontsource/quattrocento": "^5.0.19",
     "@fontsource/questrial": "^5.0.12",
     "astro": "^4.5.16",
-    "astro-relative-links": "^0.3.9",
+    "bootstrap-icons": "^1.11.3",
     "flowbite": "^2.3.0",
     "puppeteer": "^22.6.5",
     "tailwindcss": "^3.4.3",

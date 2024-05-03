@@ -16,18 +16,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-      - name: Install modules
+      - name: Install modules (rollup)
         run: npm ci
-      - name: Install dependencies
+      - name: Install dependencies (puppeteer)
         run: npm install
-      - name: Build application
-        run: npm run build
-      - name: tree
-        run: ls -l dist/
       - name: Startup Astro server in background
         run: docker compose up -d
-      - name: View Ports
-        run: docker ps
       - name: Create PDF 
         run: node scripts/pdf.cjs
       - name: Cleanup
