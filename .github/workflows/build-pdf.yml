@@ -1,13 +1,10 @@
 name: Build Astro site & print resume PDF
 
-# on: [push]
-# runs:
-#   using: 'docker'
-#   image: 'Dockerfile'
-push:
-  branches: [ $default-branch ]
-pull_request:
-  branches: [ $default-branch ]
+on: 
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
 
 jobs:
   build:
@@ -37,9 +34,3 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           path: example.pdf
-  # pdf:
-  #   needs: build
-  #   runs-on: ubuntu-latest #ghcr.io/puppeteer/puppeteer:latest
-  #   steps: 
-  #     - name: tree
-  #       run: ls -l
