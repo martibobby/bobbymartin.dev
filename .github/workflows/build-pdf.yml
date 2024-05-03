@@ -35,8 +35,8 @@ jobs:
         run: node scripts/pdf.cjs
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
-          with:
-            path: example.pdf
+        with:
+          path: example.pdf
   # pdf:
   #   needs: build
   #   runs-on: ubuntu-latest #ghcr.io/puppeteer/puppeteer:latest
