@@ -24,12 +24,14 @@ jobs:
         run: npm run build
       - name: tree
         run: ls -l dist/
-      - name: Startup Astro server
-        run: docker compose up
+      - name: Startup Astro server in background
+        run: docker compose up -d
       - name: View Ports
         run: docker ps
       - name: Create PDF 
         run: node scripts/pdf.cjs
+      - name: Cleanup
+        run: docker compose down
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
