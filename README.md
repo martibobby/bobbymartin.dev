@@ -1,37 +1,60 @@
-# Astro Starter Kit: Basics
+# Bobby Martin - Portfolio Website
 
-```sh
-npm create astro@latest -- --template basics
+## Overview
+Welcome! The objective of this repo is two-fold:
+- Create my portfolio website and resume
+- Generate my resume as a PDF from HTML
+
+This is my first Astro and Tailwind project! Feel free to review the repo and make any suggestions, but please keep in mind:
+> The best is the enemy of the good. - Voltaire
+
+## Usage
+To run this website locally, clone this repository and run:
+```bash
+docker compose up
 ```
+Then navigate to http://localhost:4321/ to view the website.
 
-## Stack Selection
-Astro for:
-- Static website generation for cheap hosting
-- Templating of 
+## Technology Used
+- [Astro](https://github.com/withastro/astro) - web framework
+    - Static website generation for cheap hosting
+    - Simplified templating engine
+    - Rollup plugin for reading yaml with Astro
+- [Tailwind](https://github.com/tailwindlabs/tailwindcss) - CSS framework
+    - Website styling 
+    - Print media queries for PDF generation
+- [AWS](https://aws.amazon.com) - website hosting
+    - Route 53 - DNS provider
+    - S3 - content hosting
+    - Cloudfront - distribution
+    - Certificate Manager - SSL/TLS certificate
+    - Cloudformation - [infrastructure deployment](https://github.com/aws-samples/amazon-cloudfront-secure-static-site)
+- GitHub Actions:
+    - For PDF generation of resume upon code updates
 
-AWS for:
-- Static website hosting with S3 and Cloudfront
-- 
+## Automation
+This repo uses Github Actions to:
+- Deploy the portfolio website to AWS
+- Generate a PDF of the resume
 
-GitHub Actions:
-- For PDF generation of resume upon code updates
+Check out the `.github/workflows/` directory to view the actions.
 
-Tailwind for:
-- Styling and other utilities
+## Local Resume PDF Generation
+Ensure you have docker and node installed on your machine.
 
-> Perfection is the enemy of good
-
-My first Astro, Tailwind, project!
-
-## Resume PDF Generation
-`node scripts/pdf.cjs`
-
-## Utilities Used
-- AstroJS for static site generation
-- Tailwind CSS for design utility classes
-- Flowbite for UI components
-- Rollup plugin for reading yaml with Astro
-
+Startup the docker container:
+```bash
+docker compose up -d
+```
+Generate a PDF from the resume content:
+```bash
+node scripts/pdf.cjs
+```
+Shut down the container:
+```
+docker compose down
+```
+## Project Structure
 Inside of your Astro project, you'll see the following folders and files:
 
 ```text
@@ -54,7 +77,7 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory.
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
