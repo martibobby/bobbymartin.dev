@@ -6,18 +6,18 @@ import content from "../data/resume.yml"
     <div class="flex flex-col items-center md:flex-row md:justify-between">
         <!-- Identify yourself -->
         <div>
-            <h1 class="text-4xl print:text-2xl mb-2 font-semibold leading-none dark:text-white">{content.name}</h1>
+            <h1 class="text-3xl print:text-2xl mb-2 font-semibold leading-none dark:text-white">{content.name}</h1>
+            <blockquote class="my-2 pl-2 border-l-2 border-sky-700">
+                <p class="text-base print:text-xs print:w-50 font-medium text-gray-900/50 dark:text-white">{content.objective}</p>
+            </blockquote>
             <!-- Objective Quote Callout -->
             <!-- Badges -->
             <div class="hidden md:flex flex-row items-center justify-center lg:justify-start">
                 {content.badge.map((item) => (
-                    <img alt={item.alt} src={item.src} class="width-8 print:width-3"> 
+                    <img alt={item.alt} src={item.src} class="h-4 print:h-2"> 
                 ))}
             </div>
         </div>
-        <blockquote class="p-2 ml-4 my-2 border-x-2 border-sky-700">
-            <p class="text-base print:text-xs print:w-50 font-medium text-gray-900/50 dark:text-white">{content.objective}</p>
-        </blockquote>
         <!-- Contact -->
         <section class="flex flex-col align-items-center">
             {content.contact.map((item) => (
@@ -32,16 +32,16 @@ import content from "../data/resume.yml"
     <h2 class="text-3xl print:text-xl text-sky-700 mt-6 dark:text-sky-700">
         <i class={content.experience.icon}></i> {content.experience.heading}
     </h2>
-    <div class="grid grid-cols-4 gap-x-4  md:gap-x-8">
+    <div class="grid grid-cols-5 gap-x-4  md:gap-x-8">
         {content.experience.timeline.map((item) => (
         <div class="justify-self-end text-right">
             <h3 class="text-xl print:text-base dark:text-sky-700">{item.company}</h3>
-            <p class="text-sm print:text-sm text-gray-500 print:text-gray-300 dark:text-gray-400">{item.dates}</p>
+            <p class="text-sm print:text-xs text-gray-500 print:text-gray-300 dark:text-gray-400">{item.dates}</p>
         </div>
-        <div class="col-span-3">
+        <div class="col-span-4">
             <div class="flex gap-x-2 flex-wrap items-baseline">
                 <h3 class="text-xl print:text-base dark:text-sky-700">{item.title}
-                <h4 class="font-thin print:text-sm text-gray-500 print:text-gray-300 dark:text-gray-400">
+                <h4 class="font-light print:text-sm text-gray-500 print:text-gray-300 dark:text-gray-400">
                     {item.subtitle}
                 </h4>
                 </h3>
@@ -61,15 +61,15 @@ import content from "../data/resume.yml"
             <i class={content.education.icon}></i> 
             {content.education.heading}
         </h2>
-        <div class="grid grid-cols-4 gap-x-8 gap-y-4 m-6">
+        <div class="grid grid-cols-5 gap-x-8 gap-y-4">
             {content.education.degrees.map((item) => (
                 <div class="justify-self-end">
                     <h3 class="text-xl print:text-base dark:text-sky-700">{item.uni}</h3>
                     <p class="text-sm text-gray-500 print:text-gray-300 dark:text-gray-400">{item.class}</p>
                 </div>
-                <div class="col-span-3">
+                <div class="col-span-4">
                     <h3 class="text-xl print:text-base dark:text-sky-700">{item.major}
-                        <small class="font-thin print:text-sm text-gray-500 print:text-gray-300 dark:text-gray-400">
+                        <small class="font-light print:text-sm text-gray-500 print:text-gray-300 dark:text-gray-400">
                             {item.subtitle}
                         </small>
                     </h3>
@@ -91,9 +91,9 @@ import content from "../data/resume.yml"
     </div>
 
     <!-- Accomplishments & Skills -->
-    <div class="flex flex-col gap-x-4 lg:flex-row">
+    <div class="grid grid-cols-5 gap-x-4">
         <!-- Accomplishments -->
-        <div class="flex basis-1/2 flex-col">
+        <div class="col-span-2">
             <h2 class="text-3xl print:text-xl text-sky-700 mt-6 dark:text-sky-700">
                 <i class={content.accomplishments.icon}></i> 
                 {content.accomplishments.heading}
@@ -103,14 +103,14 @@ import content from "../data/resume.yml"
                     <h4 class="text-xl print:text-base dark:text-sky-700">{item.name}</h4>
                     <ul class="list-none ml-6">
                         {item.bullets.map((item) => (
-                            <li class="font-thin text-gray-500 print:text-gray-300 dark:text-gray-400 print:text-xs">{item}</li>
+                            <li class="font-light text-gray-500 print:text-gray-300 dark:text-gray-400 print:text-xs">{item}</li>
                         ))}
                     </ul>
                 ))}
             </div>
         </div>
         <!-- Skills -->
-        <div class="">
+        <div class="col-span-3">
             <h2 class="text-3xl print:text-xl text-sky-700 mt-6 dark:text-sky-700">
                 <i class={content.skills.icon}></i> 
                 {content.skills.heading}
@@ -121,7 +121,7 @@ import content from "../data/resume.yml"
                             <h4 class="text-xl print:text-base dark:text-sky-700">{item.name}</h4>
                             <ul class="list-none ml-6">
                                 {item.items.map((item) => (
-                                    <li class="font-thin text-gray-500 print:text-gray-300 dark:text-gray-400 print:text-xs">{item}</li>
+                                    <li class="font-light text-gray-500 print:text-gray-300 dark:text-gray-400 print:text-xs">{item}</li>
                                 ))}
                             </ul>
                         </div>

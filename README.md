@@ -23,6 +23,7 @@ Then navigate to http://localhost:4321/ to view the website.
 - [Tailwind](https://github.com/tailwindlabs/tailwindcss) - CSS framework
     - Website styling 
     - Print media queries for PDF generation
+- TypeScript
 - [AWS](https://aws.amazon.com) - website hosting
     - Route 53 - DNS provider
     - S3 - content hosting
