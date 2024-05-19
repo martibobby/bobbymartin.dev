@@ -1,92 +1,138 @@
 ---
-import content from "../data/resume.yml"
+import content from "../data/resume.yml";
 ---
+
 <div class="flex flex-col">
     <!-- Header -->
     <div class="flex flex-col items-center md:flex-row md:justify-between">
         <!-- Identify yourself -->
         <div>
-            <h1 class="text-3xl print:text-2xl mb-2 font-semibold leading-none dark:text-white">{content.name}</h1>
+            <h1
+                class="text-3xl print:text-2xl mb-2 font-semibold leading-none dark:text-white"
+            >
+                {content.name}
+            </h1>
             <blockquote class="my-2 pl-2 border-l-2 border-sky-700">
-                <p class="text-base print:text-xs print:w-50 font-medium text-gray-900/50 dark:text-white">{content.objective}</p>
+                <p
+                    class="text-base print:text-xs print:w-50 font-medium text-gray-900/50 dark:text-white"
+                >
+                    {content.objective}
+                </p>
             </blockquote>
             <!-- Objective Quote Callout -->
             <!-- Badges -->
-            <div class="hidden md:flex flex-row items-center justify-center lg:justify-start">
-                {content.badge.map((item) => (
-                    <img alt={item.alt} src={item.src} class="h-4 print:h-2"> 
-                ))}
+            <div
+                class="hidden md:flex flex-row items-center justify-center lg:justify-start"
+            >
+                {
+                    content.badge.map((item) => (
+                        <img
+                            alt={item.alt}
+                            src={item.src}
+                            class="h-4 print:h-2"
+                        />
+                    ))
+                }
             </div>
         </div>
         <!-- Contact -->
         <section class="flex flex-col align-items-center">
-            {content.contact.map((item) => (
-                <p class="hover:text-gray-900/50 print:text-xs dark:text-white">
-                    <i class={item.icon}></i> <a href={item.href}>{item.value}</a>
+            {
+                content.contact.map((item) => (
+                    <p class="hover:text-gray-900/50 print:text-xs dark:text-white">
+                        <i class={item.icon} />{" "}
+                        <a href={item.href}>{item.value}</a>
                     </p>
-            ))}
+                ))
+            }
         </section>
     </div>
 
     <!-- Experience / Timeline -->
     <h2 class="text-3xl print:text-xl text-sky-700 mt-6 dark:text-sky-700">
-        <i class={content.experience.icon}></i> {content.experience.heading}
+        <i class={content.experience.icon}></i>
+        {content.experience.heading}
     </h2>
-    <div class="grid grid-cols-5 gap-x-4  md:gap-x-8">
-        {content.experience.timeline.map((item) => (
-        <div class="justify-self-end text-right">
-            <h3 class="text-xl print:text-base dark:text-sky-700">{item.company}</h3>
-            <p class="text-sm print:text-xs text-gray-500 print:text-gray-300 dark:text-gray-400">{item.dates}</p>
-        </div>
-        <div class="col-span-4">
-            <div class="flex gap-x-2 flex-wrap items-baseline">
-                <h3 class="text-xl print:text-base dark:text-sky-700">{item.title}
-                <h4 class="font-light print:text-sm text-gray-500 print:text-gray-300 dark:text-gray-400">
-                    {item.subtitle}
-                </h4>
-                </h3>
-            </div>
-            <ul class="list-disc ml-6">
-                 {item.bullets.map((item) => (
-                     <li class="dark:text-white print:text-xs">{item}</li>
-                 ))}
-             </ul>
-        </div>
-        ))}
+
+    <div class="grid grid-cols-5 gap-x-4 md:gap-x-8">
+        {
+            content.experience.timeline.map((item) => (
+                <>
+                    <div class="justify-self-end text-right">
+                        <h3 class="text-xl print:text-base dark:text-sky-700">
+                            {item.company}
+                        </h3>
+                        <p class="text-sm print:text-xs text-gray-500 print:text-gray-300 dark:text-gray-400">
+                            {item.dates}
+                        </p>
+                    </div>
+                    <div class="col-span-4">
+                        <div class="flex gap-x-2 flex-wrap items-baseline">
+                            <h3 class="text-xl print:text-base dark:text-sky-700">
+                                {item.title}
+                                <h4 class="font-light print:text-sm text-gray-500 print:text-gray-300 dark:text-gray-400">
+                                    {item.subtitle}
+                                </h4>
+                            </h3>
+                        </div>
+                        <ul class="list-disc ml-6">
+                            {item.bullets.map((item) => (
+                                <li class="dark:text-white print:text-xs">
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </>
+            ))
+        }
     </div>
 
     <!-- Education / Skills -->
     <div>
         <h2 class="text-3xl print:text-xl text-sky-700 mt-6 dark:text-sky-700">
-            <i class={content.education.icon}></i> 
+            <i class={content.education.icon}></i>
             {content.education.heading}
         </h2>
         <div class="grid grid-cols-5 gap-x-8 gap-y-4">
-            {content.education.degrees.map((item) => (
-                <div class="justify-self-end">
-                    <h3 class="text-xl print:text-base dark:text-sky-700">{item.uni}</h3>
-                    <p class="text-sm text-gray-500 print:text-gray-300 dark:text-gray-400">{item.class}</p>
-                </div>
-                <div class="col-span-4">
-                    <h3 class="text-xl print:text-base dark:text-sky-700">{item.major}
-                        <small class="font-light print:text-sm text-gray-500 print:text-gray-300 dark:text-gray-400">
-                            {item.subtitle}
-                        </small>
-                    </h3>
-                    <div class="flex flex-col md:flex-row items-stretch gap-x-8">
-                        {item.callout.map((item) => (
-                            <div>
-                                <h4 class="text-lg print:text-base">{item.name}</h4>
-                                <ul class="list-disc ml-6">
-                                    {item.bullets.map((item) => (
-                                        <li class="dark:text-white print:text-xs">{item}</li>
-                                    ))}
-                                </ul>
+            {
+                content.education.degrees.map((item) => (
+                    <>
+                        <div class="justify-self-end">
+                            <h3 class="text-xl print:text-base dark:text-sky-700">
+                                {item.uni}
+                            </h3>
+                            <p class="text-sm text-gray-500 print:text-gray-300 dark:text-gray-400">
+                                {item.class}
+                            </p>
+                        </div>
+                        <div class="col-span-4">
+                            <h3 class="text-xl print:text-base dark:text-sky-700">
+                                {item.major}
+                                <small class="font-light print:text-sm text-gray-500 print:text-gray-300 dark:text-gray-400">
+                                    {item.subtitle}
+                                </small>
+                            </h3>
+                            <div class="flex flex-col md:flex-row items-stretch gap-x-8">
+                                {item.callout.map((item) => (
+                                    <div>
+                                        <h4 class="text-lg print:text-base">
+                                            {item.name}
+                                        </h4>
+                                        <ul class="list-disc ml-6">
+                                            {item.bullets.map((item) => (
+                                                <li class="dark:text-white print:text-xs">
+                                                    {item}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
-                    </div>
-                </div>
-            ))}
+                        </div>
+                    </>
+                ))
+            }
         </div>
     </div>
 
@@ -94,38 +140,57 @@ import content from "../data/resume.yml"
     <div class="grid grid-cols-5 gap-x-4">
         <!-- Accomplishments -->
         <div class="col-span-2">
-            <h2 class="text-3xl print:text-xl text-sky-700 mt-6 dark:text-sky-700">
-                <i class={content.accomplishments.icon}></i> 
+            <h2
+                class="text-3xl print:text-xl text-sky-700 mt-6 dark:text-sky-700"
+            >
+                <i class={content.accomplishments.icon}></i>
                 {content.accomplishments.heading}
             </h2>
-            <div>   
-                {content.accomplishments.callout.map((item) => (
-                    <h4 class="text-xl print:text-base dark:text-sky-700">{item.name}</h4>
-                    <ul class="list-none ml-6">
-                        {item.bullets.map((item) => (
-                            <li class="font-light text-gray-500 print:text-gray-300 dark:text-gray-400 print:text-xs">{item}</li>
-                        ))}
-                    </ul>
-                ))}
+            <div>
+                {
+                    content.accomplishments.callout.map((item) => (
+                        <>
+                            <h4 class="text-xl print:text-base dark:text-sky-700">
+                                {item.name}
+                            </h4>
+                            <ul class="list-none ml-6">
+                                {item.bullets.map((item) => (
+                                    <li class="font-light text-gray-500 print:text-gray-300 dark:text-gray-400 print:text-xs">
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </>
+                    ))
+                }
             </div>
         </div>
+
         <!-- Skills -->
         <div class="col-span-3">
-            <h2 class="text-3xl print:text-xl text-sky-700 mt-6 dark:text-sky-700">
-                <i class={content.skills.icon}></i> 
+            <h2
+                class="text-3xl print:text-xl text-sky-700 mt-6 dark:text-sky-700"
+            >
+                <i class={content.skills.icon}></i>
                 {content.skills.heading}
             </h2>
             <div class="grid grid-cols-3 justify-items-stretch gap-2 mt-2">
-                    {content.skills.callout.map((item) => (
+                {
+                    content.skills.callout.map((item) => (
                         <div class="border-l-2 pl-2 border-sky-700">
-                            <h4 class="text-xl print:text-base dark:text-sky-700">{item.name}</h4>
+                            <h4 class="text-xl print:text-base dark:text-sky-700">
+                                {item.name}
+                            </h4>
                             <ul class="list-none ml-6">
                                 {item.items.map((item) => (
-                                    <li class="font-light text-gray-500 print:text-gray-300 dark:text-gray-400 print:text-xs">{item}</li>
+                                    <li class="font-light text-gray-500 print:text-gray-300 dark:text-gray-400 print:text-xs">
+                                        {item}
+                                    </li>
                                 ))}
                             </ul>
                         </div>
-                    ))}
+                    ))
+                }
             </div>
         </div>
     </div>
