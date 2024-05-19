@@ -15,6 +15,7 @@ contact:
   - name: address
     value: Minneapolis, Minnesota
     icon: bi-geo-fill
+    href: https://www.google.com/maps/place/minneapolis/
   - name: github
     value: martibobby
     icon: bi-github
@@ -22,7 +23,7 @@ contact:
 
 experience:
   heading: Experience
-  icon: bi-briefcase-fill
+  icon: bi-briefcase
   timeline:
     - company: Thrivent Financial
       title: Senior Application Engineer
@@ -81,7 +82,7 @@ experience:
 
 education:
   heading: Education
-  icon: bi-mortarboard-fill
+  icon: bi-mortarboard
   degrees:
     - uni: University of St. Thomas
       class: Class of 2018
@@ -99,7 +100,7 @@ education:
 
 accomplishments:
   heading: Accomplishments
-  icon: bi-trophy-fill
+  icon: bi-trophy
   callout:
     - name: Boy Scouts of America
       bullets: 
@@ -116,7 +117,7 @@ accomplishments:
 
 skills: 
   heading: Skills
-  icon: bi-file-code-fill
+  icon: bi-file-code
   callout: 
     - name: Software Development
       items:
