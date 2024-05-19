@@ -18,10 +18,10 @@ jobs:
           node-version: 18
       - name: Install dependencies for PDF generation (puppeteer)
         run: npm i puppeteer
-      - name: Startup Astro server in background
+      - name: Startup container (httpd serving Astro's built files) in background
         run: docker compose up -d
-      - name: Create PDF 
-        run: node scripts/pdf.cjs
+      - name: Create PDF by printing resume page
+        run: npm run pdf
       - name: Cleanup
         run: docker compose down
       - name: Upload Artifact
