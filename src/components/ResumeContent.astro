@@ -54,10 +54,9 @@ import content from "../data/resume.yml";
         {content.experience.heading}
     </h2>
 
-    <div class="grid grid-cols-5 gap-x-4 md:gap-x-8">
+    <div class="grid grid-cols-5 gap-4 md:gap-x-8">
         {
             content.experience.timeline.map((item) => (
-                <>
                     <div class="justify-self-end text-right">
                         <h3 class="text-xl print:text-base dark:text-sky-700">
                             {item.company}
@@ -66,7 +65,10 @@ import content from "../data/resume.yml";
                             {item.dates}
                         </p>
                     </div>
-                    <div class="col-span-4">
+                    <div class="col-span-4 relative ps-6 border-s border-gray-200 dark:border-gray-700">
+                        <span class="absolute flex text-white items-center justify-center w-6 h-6 bg-sky-700 rounded-full -start-3 ring-8 ring-white dark:ring-[#23262d] dark:bg-sky-700">
+                            <i class="bi-arrow-return-right text-lg place-center "></i>
+                        </span>
                         <div class="flex gap-x-2 flex-wrap items-baseline">
                             <h3 class="text-xl print:text-base dark:text-sky-700">
                                 {item.title}
