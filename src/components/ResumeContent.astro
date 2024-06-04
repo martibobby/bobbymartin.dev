@@ -8,7 +8,7 @@ import content from "../data/resume.yml";
         <!-- Identify yourself -->
         <div class="text-center md:text-left">
             <h1
-                class="text-3xl print:text-2xl mb-2 font-semibold leading-none dark:text-white"
+                class="text-5xl mb-2 font-semibold leading-none dark:text-white"
             >
                 {content.name}
             </h1>
@@ -17,7 +17,7 @@ import content from "../data/resume.yml";
                 class="my-2 pl-2 border-l-2 border-r-2 border-sky-700 md:border-r-0"
             >
                 <p
-                    class="text-base print:text-xs print:w-50 font-medium text-gray-900/50 dark:text-white"
+                    class="text-base print:w-50 font-medium text-gray-900/50 dark:text-white"
                 >
                     {content.objective}
                 </p>
@@ -29,7 +29,7 @@ import content from "../data/resume.yml";
                         <img
                             alt={item.alt}
                             src={item.src}
-                            class="h-4 print:h-2"
+                            class="h-4"
                         />
                     ))
                 }
@@ -39,7 +39,7 @@ import content from "../data/resume.yml";
         <section class="flex flex-wrap justify-center gap-x-2 md:flex-col bg-gray-50 md:bg-white dark:bg-[#23262d]">
             {
                 content.contact.map((item) => (
-                    <p class="dark:text-gray-400 hover:text-gray-900/50 print:text-xs">
+                    <p class="dark:text-gray-400 hover:text-gray-900/50">
                         <i class={item.icon} />{" "}
                         <a href={item.href}>{item.value}</a>
                     </p>
@@ -49,20 +49,20 @@ import content from "../data/resume.yml";
     </div>
 
     <!-- Experience / Timeline -->
-    <h2 class="text-3xl print:text-xl text-sky-700 mt-6 dark:text-sky-700">
+    <h2 class="text-3xl text-sky-700 dark:text-sky-700 font-semibold mt-4">
         <i class={content.experience.icon}></i>
         {content.experience.heading}
     </h2>
 
-    <div class="grid grid-cols-5 gap-4 md:gap-x-8">
+    <div class="grid grid-cols-5 gap-4">
         {
             content.experience.timeline.map((item) => (
                 <>
                     <div class="justify-self-end text-right">
-                        <h3 class="text-xl print:text-base dark:text-sky-700">
+                        <h3 class="text-xl dark:text-sky-700">
                             {item.company}
                         </h3>
-                        <p class="text-sm print:text-xs text-gray-500 print:text-gray-300 dark:text-gray-400">
+                        <p class="text-sm text-gray-500 print:text-gray-300 dark:text-gray-400">
                             {item.dates}
                         </p>
                     </div>
@@ -71,16 +71,16 @@ import content from "../data/resume.yml";
                             <i class="bi-arrow-90deg-right text-lg place-self-end" />
                         </span>
                         <div class="flex gap-x-2 flex-wrap items-baseline">
-                            <h3 class="text-xl print:text-base dark:text-sky-700">
+                            <h3 class="text-xl dark:text-sky-700">
                                 {item.title}
-                                <h4 class="font-light print:text-sm text-gray-500 print:text-gray-300 dark:text-gray-400">
+                                <h4 class="font-light text-gray-500 print:text-gray-300 dark:text-gray-400">
                                     {item.subtitle}
                                 </h4>
                             </h3>
                         </div>
                         <ul class="list-disc ml-6">
                             {item.bullets.map((item) => (
-                                <li class="dark:text-white print:text-xs">
+                                <li class="dark:text-white">
                                     {item}
                                 </li>
                             ))}
@@ -92,17 +92,17 @@ import content from "../data/resume.yml";
     </div>
 
     <!-- Education / Skills -->
-    <div>
-        <h2 class="text-3xl print:text-xl text-sky-700 mt-6 dark:text-sky-700">
+    <div class="mt-4">
+        <h2 class="text-3xl text-sky-700 dark:text-sky-700 font-semibold">
             <i class={content.education.icon}></i>
             {content.education.heading}
         </h2>
-        <div class="grid grid-cols-5 gap-x-8 gap-y-4">
+        <div class="grid grid-cols-5 gap-4">
             {
                 content.education.degrees.map((item) => (
                     <>
                         <div class="justify-self-end text-right">
-                            <h3 class="text-xl print:text-base dark:text-sky-700">
+                            <h3 class="text-xl dark:text-sky-700">
                                 {item.uni}
                             </h3>
                             <p class="text-sm text-gray-500 print:text-gray-300 dark:text-gray-400">
@@ -114,9 +114,9 @@ import content from "../data/resume.yml";
                                 <i class="bi-arrow-90deg-right text-lg place-self-end" />
                             </span>
                             <div class="flex gap-x-2 flex-wrap items-baseline">
-                                <h3 class="text-xl print:text-base dark:text-sky-700">
+                                <h3 class="text-xl dark:text-sky-700">
                                     {item.major}
-                                    <small class="font-light print:text-sm text-gray-500 print:text-gray-300 dark:text-gray-400">
+                                    <small class="font-light text-gray-500 print:text-gray-300 dark:text-gray-400">
                                         {item.subtitle}
                                     </small>
                                 </h3>
@@ -124,12 +124,12 @@ import content from "../data/resume.yml";
                             <div class="flex flex-col md:flex-row items-stretch gap-x-8">
                                 {item.callout.map((item) => (
                                     <div>
-                                        <h4 class="text-lg print:text-base dark:text-gray-400">
+                                        <h4 class="text-lg dark:text-gray-400">
                                             {item.name}
                                         </h4>
                                         <ul class="list-disc ml-6">
                                             {item.bullets.map((item) => (
-                                                <li class="dark:text-white print:text-xs">
+                                                <li class="dark:text-white">
                                                     {item}
                                                 </li>
                                             ))}
@@ -145,11 +145,11 @@ import content from "../data/resume.yml";
     </div>
 
     <!-- Accomplishments & Skills -->
-    <div class="grid grid-cols-5 gap-x-4">
+    <div class="grid grid-cols-5 gap-x-4 mt-4">
         <!-- Accomplishments -->
         <div class="col-span-2">
             <h2
-                class="text-3xl print:text-xl text-sky-700 mt-6 dark:text-sky-700"
+                class="text-3xl text-sky-700 dark:text-sky-700 font-semibold"
             >
                 <i class={content.accomplishments.icon}></i>
                 {content.accomplishments.heading}
@@ -158,12 +158,12 @@ import content from "../data/resume.yml";
                 {
                     content.accomplishments.callout.map((item) => (
                         <>
-                            <h4 class="text-xl print:text-base dark:text-sky-700">
+                            <h4 class="text-xl dark:text-sky-700">
                                 {item.name}
                             </h4>
                             <ul class="list-none ml-6">
                                 {item.bullets.map((item) => (
-                                    <li class="font-light text-gray-500 print:text-gray-300 dark:text-gray-400 print:text-xs">
+                                    <li class="font-light text-gray-500 print:text-gray-300 dark:text-gray-400">
                                         {item}
                                     </li>
                                 ))}
@@ -177,21 +177,21 @@ import content from "../data/resume.yml";
         <!-- Skills -->
         <div class="col-span-3">
             <h2
-                class="text-3xl print:text-xl text-sky-700 mt-6 dark:text-sky-700"
+                class="text-3xl text-sky-700 dark:text-sky-700 font-semibold"
             >
                 <i class={content.skills.icon}></i>
                 {content.skills.heading}
             </h2>
-            <div class="grid grid-cols-3 justify-items-stretch gap-2 mt-2">
+            <div class="grid grid-cols-2 justify-items-stretch gap-2 mt-2">
                 {
                     content.skills.callout.map((item) => (
                         <div class="border-l-2 pl-2 border-sky-700">
-                            <h4 class="text-xl print:text-base dark:text-sky-700">
+                            <h4 class="text-xl dark:text-sky-700">
                                 {item.name}
                             </h4>
                             <ul class="list-none ml-6">
                                 {item.items.map((item) => (
-                                    <li class="font-light text-gray-500 print:text-gray-300 dark:text-gray-400 print:text-xs">
+                                    <li class="font-light text-gray-500 print:text-gray-300 dark:text-gray-400">
                                         {item}
                                     </li>
                                 ))}

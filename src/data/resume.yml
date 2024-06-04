@@ -6,6 +6,8 @@ badge:
     alt: Static Badge
   - src: https://img.shields.io/badge/sha-5928373-blue
     alt: Git commit sha for the resume version
+  # - src: https://github.com/martibobby/preview.bobbymartin.dev/actions/workflows/build-pdf.yml/badge.svg
+  #   alt: GitHub badge representing whether the last automated build of this resume occured
 
 contact:
   - name: email
@@ -23,71 +25,73 @@ contact:
 
 experience:
   heading: Experience
-  icon: bi-briefcase
+  # icon: bi-briefcase
   timeline:
     - company: Thrivent Financial
       title: Senior Application Engineer
       subtitle: Systematic Alpha Quant Team
       dates: "May 2022 - present"
       bullets:
-        - Maintainer and primary contributor of internal quant developer R package for data extraction and factor building.
-        - Migrated team from SVN->Git (Bitbucket -> GitHub)
-    - company: 
+        - Architect and maintainer of internal quant R package for factor building and analysis.
+        - Optimize factor export by 300% compared to S&P's ClariFI Desktop application.
+        - Maintain model training environment, deployment, and processing in AWS. 
+        # - Support analytic data warehouse; Migrated team from SVN->Git (Bitbucket -> GitHub)
+    - company:
       title: Application Engineer
       subtitle: Investments Data Hub Team
-      dates: "January 2020 - May 2022"
+      dates: "Jan. 2020 - May 2022"
       bullets:
         - Served as primary Master Data Management technical architect.
-        - Evaluated and integrated CI/CD pipeline for MarkitEDM deploys increasing prod migrations by 350% in the first year.
-    - company: 
+        - Implemented CI/CD pipeline for MarkitEDM deploys increasing migrations by over 350%.
+        - Developed thriventprivateinvestments.com on AWS with S3 and CloudFront.
+    - company:
       title: Associate Application Engineer
       subtitle: Back Office Support Team
-      dates: "May 2018- January 2020"
-      bullets: 
-        - Engineered and maintained critical internal/vendor systems for post-trade activity and reporting.
-        - Designed, developed, and deployed thriventprivateinvestments.com on AWS with S3 and CloudFront.
-        - Architected Power BI workspace implementation delivering self-service analytics to internal groups.
+      dates: "May 2018- Jan. 2020"
+      bullets:
+        - Maintained critical internal/vendor systems for post-trade activity and reporting.
+        - Architected Power BI workspace implementation enabling self-service analytics.
     - company: City of St. Paul
       title: Web Assistant Intern
       subtitle:
       dates: "June 2017 - May 2018"
-      bullets: 
-        - Identified process redundancy and eliminated through custom Microsoft Powerapp.
+      bullets:
+        - Digitized property inspection process with custom Microsoft PowerApp.
         - Leveraged Drupal, HTML/SCSS, and GIT to improve stpaul.gov.
     # - company: Risk Leadership Initiative
     #   title: Product Developer
     #   subtitle:
     #   dates: "June 2016 - May 2018"
-    #   bullets: 
+    #   bullets:
     #     - Drafted, designed, and launched new website with email campaigns that resulted in over 3500 new connections over 6 months. Strategized email content from metrics gathered on user engagement.
     - company: University of St. Thomas
       title: Teacher's Assistant
       subtitle: Mary Daugherty, CFA. Senior Fellow in Applied Finance
       dates: "May 2015 - May 2018"
-      bullets: 
-        - Extracted Bloomberg data and synthesized findings on over 200 companies with foreign asset tax implications.
-    - company: 
+      bullets:
+        - Analyzed Bloomberg data on over 200 companies for foreign asset tax implications.
+    - company:
       title: Web Developer & Managing Intern
-      subtitle: Mary Daugherty, CFA. Senior Fellow in Applied Finance
-      dates: "Sept. 2014 - Jan 2018"
-      bullets: 
-        - Assessed client vision and provided best-practices for over 80 departments to create concepts into functional website/email solutions. Promoted to manage a team of 7.
+      subtitle:
+      dates: "Sept. 2014 - Jan. 2018"
+      bullets:
+        - Created websites and email campaigns for over 80 departments.
     # - company: Freelance
     #   title: Technology Consultant
     #   subtitle: Creative Hair Design, Handy Help, Ask the Nuns, Christina Capecchi
     #   dates: "May 2014 - December 2017"
-    #   bullets: 
+    #   bullets:
     #     - Developed unique brands, websites, and targeted email campaigns for MN-based groups.
     #     - Implemented and maintained customer database of over 2000 clients.
 
 education:
   heading: Education
-  icon: bi-mortarboard
+  # icon: bi-mortarboard
   degrees:
     - uni: University of St. Thomas
       class: Class of 2018
-      major: Political Science and Information Systems
-      subtitle: double-major
+      major: Political Science & Information Systems
+      subtitle: Double major
       callout:
         - name: Honors
           bullets:
@@ -96,40 +100,41 @@ education:
         - name: Leadership
           bullets:
             - VP of Public Relations, Student Government.
-            - Consul (President), Sigma Chi Fraternity.
+            - President, Sigma Chi Fraternity.
 
 accomplishments:
   heading: Accomplishments
-  icon: bi-trophy
+  # icon: bi-award
   callout:
     - name: Boy Scouts of America
-      bullets: 
+      bullets:
         - Eagle Scout, 2014.
-        - Assistant Scoutmaster, 2018, 80 youth scouts. 
+        - Assistant Scoutmaster, 2018.
     - name: Certifications
       bullets:
         - Certified Scrum Product Owner (CSPO).
         - Markit EDM - Basic & Advanced Training.
-        - Bloomberg Market Concepts.
     - name: Thrivent Leadership Training
       bullets:
-        - Selected as one of thirty within Thrivent for first program offering.
+        - One of thirty selected for inaugral program.
 
-skills: 
-  heading: Skills
-  icon: bi-file-code
-  callout: 
+skills:
+  heading: Competencies
+  # icon: bi-card-checklist
+  callout:
     - name: Software Development
       items:
         - R Package Development
-        - Python
+        - Python/Java
+        - GitHub Actions
+        - Static Websites
+        - AWS
+        - Terraform
     - name: Data Engineering
       items:
+          - In-memory formats
+          - Multiprocessing
           - Columnar databases
-          - Parallel processing
-          - Query optimization
-          - Modeling (OLTP/OLAP)
           - ETL Tools (Markit EDM)
-    - name: Related
-      items:
-        - AWS
+          - Modeling (OLTP/OLAP)
+          - SQL query optimization

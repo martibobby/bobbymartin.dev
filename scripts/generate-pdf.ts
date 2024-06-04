@@ -11,7 +11,7 @@ async function generatePDF(url: string) {
     // Ignore 'print' CSS media type - use regular CSS types
     // await page.emulateMediaType('screen');
     // Generate PDF and save it
-    await page.pdf({ path: 'example.pdf', format: 'A4' });
+    await page.pdf({ path: 'example.pdf', format: 'letter' });
     // Close the browser
     await browser.close();
 }
