@@ -16,6 +16,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
+      - name: Record SHA to inject onto resume output
+        run: echo git rev-parse --short
+        #git_hash=$(git rev-parse --short "$GITHUB_SHA")
       - name: Install dependencies for PDF generation (puppeteer)
         run: npm i puppeteer
       - name: Startup container (httpd serving Astro's built files) in background

@@ -1,11 +1,16 @@
-# Bobby Martin - Portfolio Website
+# Bobby Martin portfolio website - bobbymartin.dev
+
+![example workflow](https://github.com/martibobby/bobbymartin.dev/actions/workflows/build-pdf.yml/badge.svg)
+[![Built with Astro](https://astro.badg.es/v2/built-with-astro/tiny.svg)](https://astro.build)
 
 ## Overview
-Welcome! The objective of this repo is two-fold:
-- Create my portfolio website and resume
-- Generate my resume as a PDF from HTML
+Welcome! The objectives of this repo are:
+- Create a portfolio website and resume
+- Automated build of resume PDF from website
+- Automated deploy of updated static website to AWS
 
-This is my first Astro and Tailwind project! Feel free to review the repo and make any suggestions, but please keep in mind:
+This is my first Astro and Tailwind project! Feel free to review the repo and make any suggestions. 
+This project focuses on the output more than best practice. A guiding principle for this project:
 > The best is the enemy of the good. - Voltaire
 
 ## Usage
@@ -32,6 +37,7 @@ Then navigate to http://localhost:4321/ to view the website.
     - Cloudformation - [infrastructure deployment](https://github.com/aws-samples/amazon-cloudfront-secure-static-site)
 - GitHub Actions:
     - For PDF generation of resume upon code updates
+    - Puppeteer npm package to export/print resume as PDF
 
 ## Automation
 This repo uses Github Actions to:
@@ -47,36 +53,40 @@ Startup the docker container:
 ```bash
 docker compose up -d
 ```
-Generate a PDF from the resume content:
+Generate a PDF from the resume content page. A npm script (defined in `package.json`) has been created for ease:
 ```bash
-node scripts/pdf.cjs
+npm run pdf
 ```
 Shut down the container:
-```
+```bash
 docker compose down
 ```
 ## Project Structure
-Inside of your Astro project, you'll see the following folders and files:
+Project structure follows the Astro project specification, with some additional customization, such as the `scripts` and `assets` folder.
 
 ```text
 /
+├── scripts/
+│   └── generate-pdf.ts
+├── assets/
+│   └── family.png
 ├── public/
 │   └── favicon.svg
 ├── src/
 │   ├── components/
-│   │   └── Card.astro
+│   │   └── Nav.asto
+│   │   └── ResumeContent.astro
+│   │   └── ...
 │   ├── layouts/
 │   │   └── Layout.astro
+│   │   └── LayoutRaw.astro
 │   └── pages/
 │       └── index.astro
+│       └── resume.astro
+│       └── resume-raw.astro
+│       └── ...
 └── package.json
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
 
 ## Commands
 
@@ -88,4 +98,4 @@ All commands are run from the root of the project, from a terminal:
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run pdf`             | Generate a PDF                                   |
+| `npm run pdf`             | Generate a PDF of the resume page                |

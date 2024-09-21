@@ -2,22 +2,28 @@ name: Bobby Martin
 objective: Architecting data solutions to maximize business value.
 
 badge:
-  - src: https://img.shields.io/badge/version-1-blue
+  - src: https://img.shields.io/badge/release-v1.0-blue
     alt: Static Badge
   - src: https://img.shields.io/badge/sha-5928373-blue
     alt: Git commit sha for the resume version
+  - src: https://astro.badg.es/v2/built-with-astro/tiny.svg
+    alt: Built with Astro
   # - src: https://github.com/martibobby/preview.bobbymartin.dev/actions/workflows/build-pdf.yml/badge.svg
   #   alt: GitHub badge representing whether the last automated build of this resume occured
 
 contact:
-  - name: email
-    value: bobby@bobbymartin.dev
-    icon: bi-envelope
-    href: "mailto:bobby@bobbymartin.dev"
   - name: address
     value: Minneapolis, Minnesota
     icon: bi-geo-fill
     href: https://www.google.com/maps/place/minneapolis/
+  - name: email
+    value: bobby@bobbymartin.dev
+    icon: bi-envelope
+    href: "mailto:bobby@bobbymartin.dev"
+  - name: website
+    value: bobbymartin.dev
+    icon: bi-box-arrow-up-right
+    href: "https://bobbymartin.dev"
   - name: github
     value: martibobby
     icon: bi-github
@@ -127,7 +133,7 @@ skills:
         - R Package Development
         - Python/Java
         - GitHub Actions
-        - Static Websites
+        - Websites (Astro, Shiny)
         - AWS
         - Terraform
     - name: Data Engineering
