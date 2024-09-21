@@ -8,7 +8,7 @@ import content from "../data/resume.yml";
         <!-- Identify yourself -->
         <div class="text-center md:text-left">
             <h1
-                class="text-5xl mb-2 font-semibold leading-none dark:text-white"
+                class="text-5xl mb-2 font-semibold leading-none dark:text-sky-700"
             >
                 {content.name}
             </h1>
@@ -17,7 +17,7 @@ import content from "../data/resume.yml";
                 class="my-2 pl-2 border-l-2 border-r-2 border-sky-700 md:border-r-0"
             >
                 <p
-                    class="text-base print:w-50 font-medium text-gray-900/50 dark:text-white"
+                    class="text-base print:w-50 font-medium text-gray-900/50 dark:text-[#C5D1DE]"
                 >
                     {content.objective}
                 </p>
@@ -39,7 +39,7 @@ import content from "../data/resume.yml";
         <section class="flex flex-wrap justify-center gap-x-2 md:flex-col bg-gray-50 md:bg-white dark:bg-[#23262d]">
             {
                 content.contact.map((item) => (
-                    <p class="dark:text-gray-400 hover:text-gray-900/50">
+                    <p class="dark:text-[#C5D1DE] hover:text-gray-900/50">
                         <i class={item.icon} />{" "}
                         <a href={item.href}>{item.value}</a>
                     </p>
@@ -80,7 +80,7 @@ import content from "../data/resume.yml";
                         </div>
                         <ul class="list-disc ml-6">
                             {item.bullets.map((item) => (
-                                <li class="dark:text-white">
+                                <li class="dark:text-[#C5D1DE]">
                                     {item}
                                 </li>
                             ))}
@@ -129,7 +129,7 @@ import content from "../data/resume.yml";
                                         </h4>
                                         <ul class="list-disc ml-6">
                                             {item.bullets.map((item) => (
-                                                <li class="dark:text-white">
+                                                <li class="dark:text-[#C5D1DE]">
                                                     {item}
                                                 </li>
                                             ))}
@@ -163,7 +163,7 @@ import content from "../data/resume.yml";
                             </h4>
                             <ul class="list-none ml-6">
                                 {item.bullets.map((item) => (
-                                    <li class="font-light text-gray-500 print:text-gray-300 dark:text-gray-400">
+                                    <li class="font-light text-gray-500 print:text-gray-300 dark:text-[#C5D1DE]">
                                         {item}
                                     </li>
                                 ))}
@@ -191,7 +191,7 @@ import content from "../data/resume.yml";
                             </h4>
                             <ul class="list-none ml-6">
                                 {item.items.map((item) => (
-                                    <li class="font-light text-gray-500 print:text-gray-300 dark:text-gray-400">
+                                    <li class="font-light text-gray-500 print:text-gray-300 dark:text-[#C5D1DE]">
                                         {item}
                                     </li>
                                 ))}
