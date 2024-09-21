@@ -4,12 +4,10 @@ objective: Architecting data solutions to maximize business value.
 badge:
   - src: https://img.shields.io/badge/release-v1.0-blue
     alt: Static Badge
-  - src: https://img.shields.io/badge/sha-5928373-blue
-    alt: Git commit sha for the resume version
+  - src: https://github.com/martibobby/bobbymartin.dev/actions/workflows/build-pdf.yml/badge.svg
+    alt: GitHub badge representing whether the last automated build of this resume occured
   - src: https://astro.badg.es/v2/built-with-astro/tiny.svg
     alt: Built with Astro
-  # - src: https://github.com/martibobby/preview.bobbymartin.dev/actions/workflows/build-pdf.yml/badge.svg
-  #   alt: GitHub badge representing whether the last automated build of this resume occured
 
 contact:
   - name: address
