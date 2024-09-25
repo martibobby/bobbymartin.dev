@@ -80,12 +80,12 @@ experience:
       dates: "Sept. 2014 - Jan. 2018"
       bullets:
         - Created websites and email campaigns for over 80 departments.
-    # - company: Freelance
-    #   title: Technology Consultant
-    #   subtitle: Creative Hair Design, Handy Help, Ask the Nuns, Christina Capecchi
-    #   dates: "May 2014 - December 2017"
-    #   bullets:
-    #     - Developed unique brands, websites, and targeted email campaigns for MN-based groups.
+    - company: Freelance
+      title: Technology Consultant
+      subtitle: Creative Hair Design, Handy Help, Ask the Nuns, Christina Capecchi
+      dates: "May 2014 - December 2017"
+      bullets:
+        - Developed and designed websites alongside targeted email campaigns for MN-based companies.
     #     - Implemented and maintained customer database of over 2000 clients.
 
 education:
