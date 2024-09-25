@@ -1,6 +1,6 @@
 # Bobby Martin portfolio website - bobbymartin.dev
 
-![release](https://img.shields.io/github/v/release/martibobby/bobby%20martin.dev)
+![release](https://img.shields.io/github/v/release/martibobby/bobbymartin.dev)
 ![pdf workflow](https://github.com/martibobby/bobbymartin.dev/actions/workflows/build-pdf.yml/badge.svg)
 [![Built with Astro](https://astro.badg.es/v2/built-with-astro/tiny.svg)](https://astro.build)
 

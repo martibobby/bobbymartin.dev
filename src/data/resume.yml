@@ -2,7 +2,7 @@ name: Bobby Martin
 objective: Creating data solutions to maximize business value.
 
 badge:
-  - src: https://img.shields.io/github/v/release/martibobby/bobby%20martin.dev
+  - src: https://img.shields.io/github/v/release/martibobby/bobbymartin.dev
     alt: Static Badge
   - src: https://github.com/martibobby/bobbymartin.dev/actions/workflows/build-pdf.yml/badge.svg
     alt: GitHub badge representing whether the last automated build of this resume occured
