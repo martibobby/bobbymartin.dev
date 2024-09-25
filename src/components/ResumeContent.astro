@@ -6,24 +6,26 @@ import content from "../data/resume.yml";
     <!-- Header -->
     <div class="flex flex-col md:flex-row md:justify-between">
         <!-- Identify yourself -->
-        <div class="text-center md:text-left">
-            <h1
-                class="text-5xl mb-2 font-semibold leading-none dark:text-sky-700"
-            >
-                {content.name}
-            </h1>
-            <!-- Objective Quote Callout -->
-            <blockquote
-                class="my-2 pl-2 border-l-2 border-r-2 border-sky-700 md:border-r-0"
-            >
-                <p
-                    class="text-base print:w-50 font-medium text-gray-900/50 dark:text-[#C5D1DE]"
+        <div class="grid grid-cols-1 divide-y gap-2 text-center md:text-left">
+            <div>
+                <h1
+                    class="text-5xl mb-2 font-semibold leading-none dark:text-sky-700"
                 >
-                    {content.objective}
-                </p>
-            </blockquote>
+                    {content.name}
+                </h1>
+                <!-- Objective Quote Callout -->
+                <blockquote
+                    class="my-2 mb-2 pl-2 border-l-2 border-r-2 border-sky-700 md:border-r-0"
+                >
+                    <p
+                        class="text-2xl print:w-50 font-medium text-gray-900/50 dark:text-[#C5D1DE]"
+                    >
+                        {content.objective}
+                    </p>
+                </blockquote>
+            </div>
             <!-- Badges -->
-            <div class="hidden md:flex">
+            <div class="hidden md:flex pt-2">
                 {
                     content.badge.map((item) => (
                         <img

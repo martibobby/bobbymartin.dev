@@ -1,8 +1,8 @@
 name: Bobby Martin
-objective: Architecting data solutions to maximize business value.
+objective: Creating data solutions to maximize business value.
 
 badge:
-  - src: https://img.shields.io/badge/release-v1.0-blue
+  - src: https://img.shields.io/github/v/release/martibobby/bobby%20martin.dev
     alt: Static Badge
   - src: https://github.com/martibobby/bobbymartin.dev/actions/workflows/build-pdf.yml/badge.svg
     alt: GitHub badge representing whether the last automated build of this resume occured
