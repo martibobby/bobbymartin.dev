@@ -1,4 +1,4 @@
-name: Build website export resume as PDF
+name: Export PDF
 
 on: 
   push:

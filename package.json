@@ -20,6 +20,7 @@
     "bootstrap-icons": "^1.11.3",
     "flowbite": "^2.3.0",
     "puppeteer": "^22.6.5",
+    "sharp": "^0.33.5",
     "tsx": "^4.10.2",
     "typescript": "^5.4.4"
   }
