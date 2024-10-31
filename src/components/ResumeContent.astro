@@ -2,56 +2,48 @@
 import content from "../data/resume.yml";
 ---
 
-<div class="flex flex-col">
-    <!-- Header -->
-    <div class="flex flex-col md:flex-row md:justify-between">
-        <!-- Identify yourself -->
-        <div class="grid grid-cols-1 divide-y gap-2 text-center md:text-left">
-            <div>
-                <h1
-                    class="text-5xl mb-2 font-semibold leading-none dark:text-sky-700"
-                >
-                    {content.name}
-                </h1>
-                <!-- Objective Quote Callout -->
-                <blockquote
-                    class="my-2 mb-2 pl-2 border-l-2 border-r-2 border-sky-700 md:border-r-0"
-                >
-                    <p
-                        class="text-2xl print:w-50 font-medium text-gray-900/50 dark:text-[#C5D1DE]"
-                    >
-                        {content.objective}
-                    </p>
-                </blockquote>
-            </div>
-            <!-- Badges -->
-            <div class="hidden md:flex pt-2">
-                {
-                    content.badge.map((item) => (
-                        <img
-                            alt={item.alt}
-                            src={item.src}
-                            class="h-4"
-                        />
-                    ))
-                }
-            </div>
-        </div>
-        <!-- Contact -->
-        <section class="flex flex-wrap justify-center gap-x-2 md:flex-col bg-gray-50 md:bg-white dark:bg-[#23262d]">
-            {
-                content.contact.map((item) => (
-                    <p class="dark:text-[#C5D1DE] hover:text-gray-900/50">
-                        <i class={item.icon} />{" "}
-                        <a href={item.href}>{item.value}</a>
-                    </p>
-                ))
-            }
-        </section>
+<!-- Header -->
+<div class="flex flex-row flex-wrap justify-between">
+    <!-- Identify yourself --> 
+    <div>
+        <h1 class="text-5xl mb-2 font-semibold leading-none dark:text-sky-700">
+            {content.name}
+        </h1>
+        <blockquote class="my-4 mb-2 pl-2 border-l-2 border-r-2 border-sky-700 md:border-r-0">
+            <p class="text-2xl print:w-50 font-medium text-gray-900/50 dark:text-[#C5D1DE]">
+                {content.objective}
+            </p>
+        </blockquote>
     </div>
+    <!-- Contact -->
+    <section class="flex flex-wrap justify-center gap-x-2 md:flex-col bg-gray-50 md:bg-white dark:bg-[#23262d]">
+        {
+            content.contact.map((item) => (
+                <p class="dark:text-[#C5D1DE] hover:text-gray-900/50">
+                    <i class={item.icon} />{" "}
+                    <a href={item.href}>{item.value}</a>
+                </p>
+            ))
+        }
+    </section>
+    <!-- Badges -->
+    <div class="hidden md:flex pt-2">
+        {
+            content.badge.map((item) => (
+                <a href = {item.href}>
+                    <img
+                        alt={item.alt}
+                        src={item.src}
+                        class="h-4"
+                    />
+                </a>
+            ))
+        }
+    </div>
+</div>
 
     <!-- Experience / Timeline -->
-    <h2 class="text-4xl text-sky-700 dark:text-sky-700 font-semibold mt-4">
+    <h2 class="text-4xl text-sky-700 dark:text-sky-700 font-semibold mt-8">
         <i class={content.experience.icon}></i>
         {content.experience.heading}
     </h2>
@@ -93,8 +85,8 @@ import content from "../data/resume.yml";
         }
     </div>
 
-    <!-- Education / Skills -->
-    <div class="mt-4">
+    <!-- Education  -->
+    <div class="mt-8">
         <h2 class="text-4xl text-sky-700 dark:text-sky-700 font-semibold">
             <i class={content.education.icon}></i>
             {content.education.heading}
@@ -147,7 +139,7 @@ import content from "../data/resume.yml";
     </div>
 
     <!-- Accomplishments & Skills -->
-    <div class="grid grid-cols-5 gap-x-4 mt-4">
+    <div class="grid grid-cols-5 gap-x-4 mt-8">
         <!-- Accomplishments -->
         <div class="col-span-2">
             <h2
@@ -204,4 +196,3 @@ import content from "../data/resume.yml";
             </div>
         </div>
     </div>
-</div>
