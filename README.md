@@ -5,9 +5,8 @@
 [![Built with Astro](https://astro.badg.es/v2/built-with-astro/tiny.svg)](https://astro.build)
 
 ## Overview
-This repo simplifies updates to my personal portfolio and resume with the following objectives:
-- Create a portfolio website and resume
-- Store all data in `.yml` files for simplied resume updates (see [`/src/data/resume.yml`](/src/data/resume.yml))
+This repo has the following objectives:
+- Simplify updates to my portfolio website and resume ([`/src/data/resume.yml`](/src/data/resume.yml))
 - Automated build of resume PDF from website (GitHub Action)
 - Automated deploy of updated static website to AWS (GitHub Action)
 
@@ -69,9 +68,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run pdf`             | Generate a PDF of the resume page hosted at `localhost:4321`      |
 
 ## Docker - Local Resume PDF Generation
-The [`Dockerfile`](Dockerfile) and [`compose.yaml`](compose.yaml) will build the Astro website as static HTML files, then start up an `httpd` web server to serve those files. This is used within a GitHub Action workflow 
-
-While a good backup, the goal 
+The [`Dockerfile`](Dockerfile) and [`compose.yaml`](compose.yaml) will build the Astro website as static HTML files, then start up an `httpd` web server to serve those files. This is used within a GitHub Action workflow.
 
 Ensure you have docker and node installed on your machine.
 
@@ -88,7 +85,7 @@ Shut down the container:
 docker compose down
 ```
 ## Project Structure
-Project structure follows the Astro project specification, with some additional customization, such as the `scripts` and `src/data` folders.
+Project structure follows the Astro project specification, with some customization, such as the `scripts` and `src/data` folders.
 
 ```text
 /
