@@ -4,10 +4,13 @@ objective: Creating data solutions to maximize business value.
 badge:
   - src: https://img.shields.io/github/v/release/martibobby/bobbymartin.dev
     alt: Static Badge
-  - src: https://github.com/martibobby/bobbymartin.dev/actions/workflows/build-pdf.yml/badge.svg
-    alt: GitHub badge representing whether the last automated build of this resume occured
-  - src: https://astro.badg.es/v2/built-with-astro/tiny.svg
-    alt: Built with Astro
+    href: https://github.com/martibobby/bobbymartin.dev
+  - alt: GitHub badge representing whether the last automated build of this resume occured
+    src: https://github.com/martibobby/bobbymartin.dev/actions/workflows/build-pdf.yml/badge.svg
+    href: https://github.com/martibobby/bobbymartin.dev/actions/workflows/build-pdf.yml
+  - alt: Built with Astro
+    src: https://astro.badg.es/v2/built-with-astro/tiny.svg
+    href: "https://astro.build"
 
 contact:
   - name: address
@@ -36,9 +39,10 @@ experience:
       subtitle: Systematic Alpha Quant Team
       dates: "May 2022 - present"
       bullets:
-        - Architect and maintainer of internal quant R package for factor building and analysis.
-        - Optimize factor export by 300% compared to S&P's ClariFI Desktop application.
+        - Author and architect of internal R package platform for quantitative factor building and analysis.
+        - Optimized factor export by 300% compared to S&P's ClariFI Desktop application.
         - Maintain model training environment, deployment, and processing in AWS. 
+        - Publish reports, dashboards, and web apps after data anaylsis
         # - Support analytic data warehouse; Migrated team from SVN->Git (Bitbucket -> GitHub)
     - company:
       title: Application Engineer
