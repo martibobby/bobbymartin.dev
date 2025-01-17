@@ -40,9 +40,10 @@ experience:
       dates: "May 2022 - present"
       bullets:
         - Author and architect of internal R package platform for quantitative factor building and analysis.
+        - Developed quantitative factors for use within the Systematic Alpha team's proprietary models.
         - Optimized factor export by 300% compared to S&P's ClariFI Desktop application.
         - Maintain model training environment, deployment, and processing in AWS. 
-        - Publish reports, dashboards, and web apps after data anaylsis
+        - Publish reports, dashboards, and web apps for portfolio analysis and attribution.
         # - Support analytic data warehouse; Migrated team from SVN->Git (Bitbucket -> GitHub)
     - company:
       title: Application Engineer
