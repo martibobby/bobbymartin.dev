@@ -50,7 +50,6 @@ experience:
       subtitle: Investments Data Hub Team
       dates: "Jan. 2020 - May 2022"
       bullets:
-        - Served as primary Master Data Management technical architect.
         - Implemented CI/CD pipeline for MarkitEDM deploys increasing migrations by over 350%.
         - Developed thriventprivateinvestments.com on AWS with S3 and CloudFront.
     - company:
