@@ -30,4 +30,4 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          path: example.pdf
+          path: bobby_martin_resume.pdf
