@@ -42,7 +42,7 @@ experience:
         - Author and architect of internal R package platform for quantitative factor building and analysis.
         - Developed quantitative factors for use within the Systematic Alpha team's proprietary models.
         - Optimized factor export by 300% compared to S&P's ClariFI Desktop application.
-        - Maintain model training environment, deployment, and processing in AWS. 
+        - Maintain Systematic Alpha's production environment, deployment, and processing in AWS.
         - Publish reports, dashboards, and web apps for portfolio analysis and attribution.
         # - Support analytic data warehouse; Migrated team from SVN->Git (Bitbucket -> GitHub)
     - company:
@@ -125,7 +125,7 @@ accomplishments:
         - Markit EDM - Basic & Advanced Training.
     - name: Thrivent Leadership Training
       bullets:
-        - One of thirty selected for inaugral program.
+        - One of thirty selected for inaugural program.
 
 skills:
   heading: Competencies
