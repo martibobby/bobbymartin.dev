@@ -39,7 +39,7 @@ experience:
       subtitle: Systematic Alpha Quant Team
       dates: "May 2022 - present"
       bullets:
-        - Architect of internal R package platform for quantitative factor building and analysis.
+        - Author and architect of internal R package platform for quantitative factor building and analysis.
         - Developed quantitative factors for use within the Systematic Alpha team's proprietary models.
         - Optimized factor export by 300% compared to S&P's ClariFI Desktop application.
         - Maintain Systematic Alpha's production environment, deployment, and processing in AWS.
