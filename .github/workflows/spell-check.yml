@@ -1,0 +1,28 @@
+name: Spell Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  spell-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install hunspell
+        run: |
+          sudo apt-get update
+          sudo apt-get install hunspell-en-us
+      # - name: Spell Check resume.yml
+      #   run: hunspell -l en_US ./src/data/resume.yml
+      - name: Spell Check resume.yml
+        run: |
+        misspelled_words=$(hunspell -l en_US ./src/data/resume.yml | grep -v '^*')
+        if [ -n "$misspelled_words" ]; then
+          echo "Found misspellings:"
+          echo "$misspelled_words"
+          exit 1
+        fi
