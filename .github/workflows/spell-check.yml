@@ -21,10 +21,10 @@ jobs:
         run: hunspell -D
       - name: Print wd
         run: ls -l 
-      - name: Check if hunspell works with pipe 
+      - name: Hunspell sanity check
         run: echo frqy refries | hunspell -a -d en_US
       - name: Spell Check resume.yml
-        run: hunspell -d /usr/share/hunspell/en_US ./src/data/resume.yml
+        run: cat -n ./src/data/resume.yml | hunspell -a -d en_US
       # - name: Spell Check resume.yml
       #   run: |
       #     misspelled_words=$(hunspell ./src/data/resume.yml | grep -v '^*')
