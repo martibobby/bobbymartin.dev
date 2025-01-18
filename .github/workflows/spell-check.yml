@@ -15,6 +15,7 @@ jobs:
       - name: Install hunspell
         run: |
           sudo apt-get update
+          sudo apt-get install hunspell
           sudo apt-get install hunspell-en-us
       # - name: Spell Check resume.yml
       #   run: hunspell -l en_US ./src/data/resume.yml
