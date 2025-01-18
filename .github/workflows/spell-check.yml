@@ -17,8 +17,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install hunspell
           sudo apt-get install hunspell-en-us
-      # - name: Spell Check resume.yml
-      #   run: hunspell -l en_US ./src/data/resume.yml
+      - name: Check hunspell dictionaries
+        run: hunspell -D
       - name: Spell Check resume.yml
         run: |
           misspelled_words=$(hunspell -l en_US ./src/data/resume.yml | grep -v '^*')
