@@ -14,15 +14,17 @@ jobs:
         uses: actions/checkout@v4
       - name: Install hunspell
         run: |
-          sudo apt-get update
-          sudo apt-get install hunspell
-          sudo apt-get install hunspell-en-us
+          apt-get update
+          apt-get install hunspell
+          apt-get install hunspell-en-us
       - name: Check hunspell dictionaries
         run: hunspell -D
       - name: Print wd
         run: ls -l 
+      - name: Check if hunspell works with pipe 
+        run: echo frqy refries | hunspell -a -d en_US
       - name: Spell Check resume.yml
-        run: hunspell ./src/data/resume.yml
+        run: hunspell -d /usr/share/hunspell/en_US ./src/data/resume.yml
       # - name: Spell Check resume.yml
       #   run: |
       #     misspelled_words=$(hunspell ./src/data/resume.yml | grep -v '^*')
