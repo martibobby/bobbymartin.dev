@@ -20,9 +20,9 @@ jobs:
       #   run: hunspell -l en_US ./src/data/resume.yml
       - name: Spell Check resume.yml
         run: |
-        misspelled_words=$(hunspell -l en_US ./src/data/resume.yml | grep -v '^*')
-        if [ -n "$misspelled_words" ]; then
-          echo "Found misspellings:"
-          echo "$misspelled_words"
-          exit 1
-        fi
+          misspelled_words=$(hunspell -l en_US ./src/data/resume.yml | grep -v '^*')
+          if [ -n "$misspelled_words" ]; then
+            echo "Found misspellings:"
+            echo "$misspelled_words"
+            exit 1
+          fi
