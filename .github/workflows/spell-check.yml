@@ -23,13 +23,14 @@ jobs:
         run: ls -l 
       - name: Hunspell sanity check
         run: echo frqy refries | hunspell -a -d en_US
-      - name: Spell Check resume.yml
-        run: cat -n ./src/data/resume.yml | hunspell -a -d en_US
       # - name: Spell Check resume.yml
-      #   run: |
-      #     misspelled_words=$(hunspell ./src/data/resume.yml | grep -v '^*')
-      #     if [ -n "$misspelled_words" ]; then
-      #       echo "Found misspellings:"
-      #       echo "$misspelled_words"
-      #       exit 1
-      #     fi
+      #   run: cat -n ./src/data/resume.yml | hunspell -a -d en_US
+      - name: Spell Check resume.yml
+        run: misspelled_lines=$(cat -n ./src/data/resume.yml | hunspell -a -d en_US | grep -v '^*')
+      - name: Report results
+        run: | 
+          if [ -n "$misspelled_lines" ]; then
+            echo "Found misspellings:"
+            echo "$misspelled_lines"
+            exit 1
+          fi
