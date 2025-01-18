@@ -14,9 +14,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Install hunspell
         run: |
-          apt-get update
-          apt-get install hunspell
-          apt-get install hunspell-en-us
+          sudo apt-get update
+          sudo apt-get install hunspell
+          sudo apt-get install hunspell-en-us
       - name: Check hunspell dictionaries
         run: hunspell -D
       - name: Print wd
