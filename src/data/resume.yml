@@ -43,7 +43,7 @@ experience:
         - Developed quantitative factors for use within the Systematic Alpha team's proprietary models.
         - Optimized factor export by 300% compared to S&P's ClariFI Desktop application.
         - Maintain Systematic Alpha's production environment, deployment, and processing in AWS.
-        - Publish reports, dashboards, and web apps for portfolio analysis and attribution.
+        - Publish reports, dashboards, and web apps for portfolio analysis and attbution.
         # - Support analytic data warehouse; Migrated team from SVN->Git (Bitbucket -> GitHub)
     - company:
       title: Application Engineer
