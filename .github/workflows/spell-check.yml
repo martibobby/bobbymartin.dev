@@ -31,7 +31,7 @@ jobs:
       # commas and spaces.      
       - name: Spell Check resume.yml
         run: |
-          misspelled_lines=$(cat -n ./src/data/resume.yml | hunspell -a -d en_US -p custom-dict | grep -v -E '^*|^@')
+          misspelled_lines=$(cat -n ./src/data/resume.yml | hunspell -a -d en_US -p custom-dict | grep -v -E '^\*|^@')
           if [ -n "$misspelled_lines" ]; then
               echo "Found misspellings:"
               echo "$misspelled_lines"
