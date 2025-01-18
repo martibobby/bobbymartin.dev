@@ -21,7 +21,7 @@ jobs:
         run: hunspell -D
       - name: Spell Check resume.yml
         run: |
-          misspelled_words=$(hunspell -l /usr/share/hunspell/en_US ./src/data/resume.yml | grep -v '^*')
+          misspelled_words=$(hunspell ./src/data/resume.yml | grep -v '^*')
           if [ -n "$misspelled_words" ]; then
             echo "Found misspellings:"
             echo "$misspelled_words"
