@@ -47,7 +47,7 @@ jobs:
           fi
       - name: Format misspellings as markdown table
         run: |
-          "# Spell Check Results
+          echo "# Spell Check Results
             | Misspelling | Near Misses |
             |---|---|" > summary_table.md
 
