@@ -37,7 +37,7 @@ jobs:
         run: |          
           if [[ -s hunspell_output.txt ]]; then
             # Write github error annotation to show on job
-            echo "::error file=resume.yml,title=misspellings-found::One or more misspellings found in resume.yml!"
+            echo "::error title=misspellings-found::One or more misspellings found in resume.yml!"
             echo "::warning title=custom-dictionary::Do you need to update the custom dictionary found at .github/workflows/data/custom-dict?"          
             exit 0
           else
@@ -48,6 +48,7 @@ jobs:
       - name: Format misspellings as markdown table
         run: |
           echo "# Spell Check Results
+            The following words were misspelled in ./src/data/resume.yml
             | Misspelling | Near Misses |
             |---|---|" > summary_table.md
 
