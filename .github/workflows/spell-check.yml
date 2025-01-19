@@ -28,7 +28,7 @@ jobs:
       # misspellings. Dictionary can be found at .github/workflows/data/custom-dict
       - name: Run Spell Check on Resume
         run: |
-          cat -n ./src/data/resume.yml | hunspell -a -d en_US -p .github/workflows/data/custom-dict | grep -v -E '^\*|^@' | grep -v '^$' >> hunspell_output.txt
+          cat -n ./src/data/resume.yml | hunspell -a -d en_US -p '.github/workflows/data/custom-dict' | grep -v -E '^\*|^@' | grep -v '^$' >> hunspell_output.txt
       - name: Check for misspellings
         run: |          
           if [[ -s hunspell_output.txt ]]; then
