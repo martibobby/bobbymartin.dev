@@ -28,18 +28,18 @@ jobs:
       # misspellings. Dictionary can be found at .github/workflows/data/custom-dict
       - name: Run Spell Check on Resume
         run: |
-          cat -n ./src/data/resume.yml | hunspell -a -d en_US -p custom-dict.dic | grep -v -E '^\*|^@' > hunspell_output.txt
+          cat -n ./src/data/resume.yml | hunspell -a -d en_US -p custom-dict.dic | grep -v -E '^\*|^@' | sort -u | grep '/^$/d' > hunspell_output.txt
       - name: Check for misspellings
         run: |          
           if [[ -s hunspell_output.txt ]]; then
+            # Write github error annotation to show on job
+            echo "::error file=resume.yml,title=misspellings-found::One or more misspellings found in resume.yml!"
+            echo "::warning title=custom-dictionary::Do you need to update the custom dictionary found at .github/workflows/data/custom-dict?"          
+            exit 0
+          else
             # Write github annotation to show on job and exit
             echo "::notice::No misspellings found in ./src/data/resume.yml!"
             echo ":white_check_mark: Spell check passed!" >> $GITHUB_STEP_SUMMARY
-            exit 0
-          else
-            # Write github error annotation to show on job
-            echo "::error file=resume.yml,title=misspellings-found::One or more misspellings found in resume.yml!"
-            echo "::warning title=custom-dictionary::Do you need to update the custom dictionary found at .github/workflows/data/custom-dict?"
           fi
       - name: Format misspellings as markdown
         run: |
