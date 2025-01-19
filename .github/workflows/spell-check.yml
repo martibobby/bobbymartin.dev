@@ -28,39 +28,39 @@ jobs:
       # misspellings. Dictionary can be found at .github/workflows/data/custom-dict
       - name: Run Spell Check on Resume
       - run: |
-        echo "::group::Run Spell check and write to file"
-        cat -n ./src/data/resume.yml | hunspell -a -d en_US -p .github/workflows/data/custom-dict | grep -v -E '^\*|^@' | grep -v '^$' >> hunspell_output.txt
-        echo "::endgroup::"
-        
-        echo "::group::Were there misspellings?"
-        if [[ -s hunspell_output.txt ]]; then
-          # Write github annotation to show on job and exit
-          echo "::notice::No misspellings found in ./src/data/resume.yml!"
-          echo ":white_check_mark: Spell check passed!" >> $GITHUB_STEP_SUMMARY
-          exit 0
-        else
-          # Write github error annotation to show on job
-          echo "::error file=resume.yml,title=misspellings-found::One or more misspellings found in resume.yml!"
-          echo "::warning title=custom-dictionary::Do you need to update the custom dictionary found at .github/workflows/data/custom-dict?"
-        fi
-        echo "::endgroup::"
+          echo "::group::Run Spell check and write to file"
+          cat -n ./src/data/resume.yml | hunspell -a -d en_US -p .github/workflows/data/custom-dict | grep -v -E '^\*|^@' | grep -v '^$' >> hunspell_output.txt
+          echo "::endgroup::"
+          
+          echo "::group::Were there misspellings?"
+          if [[ -s hunspell_output.txt ]]; then
+            # Write github annotation to show on job and exit
+            echo "::notice::No misspellings found in ./src/data/resume.yml!"
+            echo ":white_check_mark: Spell check passed!" >> $GITHUB_STEP_SUMMARY
+            exit 0
+          else
+            # Write github error annotation to show on job
+            echo "::error file=resume.yml,title=misspellings-found::One or more misspellings found in resume.yml!"
+            echo "::warning title=custom-dictionary::Do you need to update the custom dictionary found at .github/workflows/data/custom-dict?"
+          fi
+          echo "::endgroup::"
 
-        echo "::group:: Format hunspell results and append to markdown table"
-        while IFS= read -r line; do
-          # Extract the first word
-          first_word=$(echo "$line" | cut -d' ' -f2) 
+          echo "::group:: Format hunspell results and append to markdown table"
+          while IFS= read -r line; do
+            # Extract the first word
+            first_word=$(echo "$line" | cut -d' ' -f2) 
 
-          # Extract the suggestions (if any)
-          suggestions=$(echo "$line" | cut -d':' -f2 | sed 's/^ //') 
+            # Extract the suggestions (if any)
+            suggestions=$(echo "$line" | cut -d':' -f2 | sed 's/^ //') 
 
-          # Append each row onto table template
-          echo "$first_word|$suggestions" >> .github/workflows/data/table_header.md
-        done < hunspell_output.txt
-        echo "::endgroup::"
+            # Append each row onto table template
+            echo "$first_word|$suggestions" >> .github/workflows/data/table_header.md
+          done < hunspell_output.txt
+          echo "::endgroup::"
 
-        echo "::group::Write table as GitHub Action job summary"
-        cat .github/workflows/data/table_header.md >> $GITHUB_STEP_SUMMARY
-        echo "::endgroup::"
+          echo "::group::Write table as GitHub Action job summary"
+          cat .github/workflows/data/table_header.md >> $GITHUB_STEP_SUMMARY
+          echo "::endgroup::"
 
-        # Exit with error code since misspellings were found
-        exit 1
+          # Exit with error code since misspellings were found
+          exit 1
