@@ -27,7 +27,7 @@ jobs:
       # A custom dictionary is stored in this repo so this jargon is not reported as 
       # misspellings. Dictionary can be found at .github/workflows/data/custom-dict
       - name: Run Spell Check on Resume
-      - run: |
+        run: |
           echo "::group::Run Spell check and write to file"
           cat -n ./src/data/resume.yml | hunspell -a -d en_US -p .github/workflows/data/custom-dict | grep -v -E '^\*|^@' | grep -v '^$' >> hunspell_output.txt
           echo "::endgroup::"
