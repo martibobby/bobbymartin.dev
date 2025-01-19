@@ -42,7 +42,7 @@ jobs:
             echo "::warning title=custom-dictionary::Do you need to update the custom dictionary found at .github/workflows/data/custom-dict?"
           fi
       - name: Format misspellings as markdown
-        run:
+        run: |
           while IFS= read -r line; do
             # Extract the first word
             first_word=$(echo "$line" | cut -d' ' -f2) 
@@ -54,6 +54,6 @@ jobs:
             echo "$first_word|$suggestions" >> .github/workflows/data/table_header.md
           done < hunspell_output.txt
       - name: Write table as GitHub Action job summary
-        run:
+        run: |
           cat .github/workflows/data/table_header.md >> $GITHUB_STEP_SUMMARY
           exit 1
