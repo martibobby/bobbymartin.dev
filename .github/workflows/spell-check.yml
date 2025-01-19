@@ -26,9 +26,11 @@ jobs:
       # Techincal resumes likely won't match very well to the english language...
       # A custom dictionary is stored in this repo so this jargon is not reported as 
       # misspellings. Dictionary can be found at .github/workflows/data/custom-dict
+      - name: See if .github exists
+        run: ls -a
       - name: Run Spell Check on Resume
         run: |
-          cat -n ./src/data/resume.yml | hunspell -a -d en_US -p '.github/workflows/data/custom-dict.dic' | grep -v -E '^\*|^@' | grep -v '^$' >> hunspell_output.txt
+          cat -n ./src/data/resume.yml | hunspell -a -d en_US -p custom-dict.dic | grep -v -E '^\*|^@' | grep -v '^$' >> hunspell_output.txt
       - name: Check for misspellings
         run: |          
           if [[ -s hunspell_output.txt ]]; then
