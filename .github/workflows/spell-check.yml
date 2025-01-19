@@ -47,6 +47,10 @@ jobs:
           fi
       - name: Format misspellings as markdown table
         run: |
+          "# Spell Check Results
+            | Misspelling | Near Misses |
+            |---|---|" > summary_table.md
+
           while IFS= read -r line; do
             # Extract the first word
             first_word=$(echo "$line" | cut -d' ' -f2) 
@@ -55,9 +59,9 @@ jobs:
             suggestions=$(echo "$line" | cut -d':' -f2 | sed 's/^ //') 
 
             # Append each row onto table template
-            echo "$first_word|$suggestions" >> ./.github/workflows/data/table_header.md
+            echo "$first_word|$suggestions" >> summary_table.md
           done < hunspell_output.txt
       - name: Write table as GitHub Action job summary
         run: |
-          cat .github/workflows/data/table_header.md >> $GITHUB_STEP_SUMMARY
+          cat summary_table.md >> $GITHUB_STEP_SUMMARY
           exit 1
