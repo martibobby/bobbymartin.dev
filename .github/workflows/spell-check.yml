@@ -29,9 +29,9 @@ jobs:
       - name: Run Spell Check on Resume
         run: |
           cat -n ./src/data/resume.yml | 
-            hunspell -a -d en_US -p custom-dict.dic | 
-            grep -v -E '^\*|^@' | 
-            grep -v '^$' |
+            hunspell -a -d en_US -p custom-dict.dic | # Run spell check
+            grep -v -E '^\*|^@' | # Extract only misspellings from output
+            grep -v '^$' | # Remove blank lines
             sort -u > hunspell_output.txt
       - name: Check for misspellings
         run: |          
@@ -45,7 +45,7 @@ jobs:
             echo "::notice::No misspellings found in ./src/data/resume.yml!"
             echo ":white_check_mark: Spell check passed!" >> $GITHUB_STEP_SUMMARY
           fi
-      - name: Format misspellings as markdown
+      - name: Format misspellings as markdown table
         run: |
           while IFS= read -r line; do
             # Extract the first word
@@ -55,7 +55,7 @@ jobs:
             suggestions=$(echo "$line" | cut -d':' -f2 | sed 's/^ //') 
 
             # Append each row onto table template
-            echo "$first_word|$suggestions" >> .github/workflows/data/table_header.md
+            echo "$first_word|$suggestions" >> ./.github/workflows/data/table_header.md
           done < hunspell_output.txt
       - name: Write table as GitHub Action job summary
         run: |
