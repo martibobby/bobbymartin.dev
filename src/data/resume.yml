@@ -5,7 +5,7 @@ badge:
   - src: https://img.shields.io/github/v/release/martibobby/bobbymartin.dev
     alt: Static Badge
     href: https://github.com/martibobby/bobbymartin.dev
-  - alt: GitHub badge representing whether the last automated build of this resume occured
+  - alt: GitHub badge representing whether the last automated build of this resume occurred
     src: https://github.com/martibobby/bobbymartin.dev/actions/workflows/build-pdf.yml/badge.svg
     href: https://github.com/martibobby/bobbymartin.dev/actions/workflows/build-pdf.yml
   - alt: Built with Astro
@@ -43,7 +43,7 @@ experience:
         - Developed quantitative factors for use within the Systematic Alpha team's proprietary models.
         - Optimized factor export by 300% compared to S&P's ClariFI Desktop application.
         - Maintain Systematic Alpha's production environment, deployment, and processing in AWS.
-        - Publish reports, dashboards, and web apps for portfolio analysis and attbution.
+        - Publish reports, dashboards, and web apps for portfolio analysis and attribution.
         # - Support analytic data warehouse; Migrated team from SVN->Git (Bitbucket -> GitHub)
     - company:
       title: Application Engineer
