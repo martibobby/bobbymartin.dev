@@ -30,6 +30,7 @@ jobs:
         run: |
           echo "::group::Run Spell check and write to file"
           cat -n ./src/data/resume.yml | hunspell -a -d en_US -p .github/workflows/data/custom-dict | grep -v -E '^\*|^@' | grep -v '^$' >> hunspell_output.txt
+          echo "Wrote results to file ./hunspell_output.txt"
           echo "::endgroup::"
           
           echo "::group::Were there misspellings?"
