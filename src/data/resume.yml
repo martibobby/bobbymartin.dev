@@ -5,7 +5,7 @@ badge:
   - src: https://img.shields.io/github/v/release/martibobby/bobbymartin.dev
     alt: Static Badge
     href: https://github.com/martibobby/bobbymartin.dev
-  - alt: GitHub badge representing whether the last automated build of this resume occured
+  - alt: GitHub badge representing whether the last automated build of this resume occurred
     src: https://github.com/martibobby/bobbymartin.dev/actions/workflows/build-pdf.yml/badge.svg
     href: https://github.com/martibobby/bobbymartin.dev/actions/workflows/build-pdf.yml
   - alt: Built with Astro
