@@ -45,7 +45,7 @@ experience:
       subtitle: Systematic Alpha Quant Team
       dates: "May 2022 - present"
       bullets:
-        - description: Author and maintianer of internal R package platform for quantitative factor building and analysis.
+        - description: Author and maintainer of internal R package platform for quantitative factor building and analysis.
           sub_bullets:
             - Optimized factor calculation and export by over 500% compared to S&P's ClariFI Desktop application.
             - Designed and architected factor definitions and transformations as code for greater flexibility.
@@ -159,23 +159,3 @@ skills:
       items:
         - CI/CD (GitHub Actions)
         - Secrets Management
-    # - name: Engineering Capabilities
-    #   items:
-    #     - R Package Development
-    #     - Python Development
-    #     - Containerization (Docker)
-    #     - CI/CD Tools (GitHub Actions)
-    #     - Websites (Astro, Shiny)
-    #     - AWS (IAM, EC2, S3, BedRock)
-    #     - IaC (Terraform, Ansible)
-    #     - Secrets Management (Hasicorp Vault)
-    # - name: Data Engineering
-    #   items:
-    #       - Data pipelines
-    #       - Processing for analytic queries
-    #       - Lazy querying (DuckDB, polars)
-    #       - Multiprocessing
-    #       - Columnar structures (arrow, parquet)
-    #       - ETL Tools (Markit EDM, Informatica)
-    #       - Modeling (OLTP/OLAP)
-    #       - SQL query optimization
