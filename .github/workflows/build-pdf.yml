@@ -1,6 +1,7 @@
 name: Export PDF
 
 on: 
+  workflow_dispatch:
   push:
     branches: [ main ]
 

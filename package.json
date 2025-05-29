@@ -1,7 +1,7 @@
 {
   "name": "bobbymartin-dev",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,12 +11,12 @@
     "pdf": "npx tsx scripts/generate-pdf.ts"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.10",
-    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/tailwind": "^6.0.2",
     "@fontsource/fraunces": "^5.0.19",
     "@fontsource/poppins": "^5.0.13",
     "@rollup/plugin-yaml": "^4.1.2",
-    "astro": "^4.5.16",
+    "astro": "^5.8.0",
     "bootstrap-icons": "^1.11.3",
     "flowbite": "^2.3.0",
     "puppeteer": "^22.6.5",
