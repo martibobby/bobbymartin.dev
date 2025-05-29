@@ -1,16 +1,22 @@
 name: Bobby Martin
-objective: Creating data solutions to maximize business value.
+objective: Leveraging technology to optimize investment decision-making across asset classes.
 
 badge:
-  - src: https://img.shields.io/github/v/release/martibobby/bobbymartin.dev
-    alt: Static Badge
+  - src: https://img.shields.io/github/package-json/v/martibobby/bobbymartin.dev?style=flat&logoSize=auto
+    alt: Badge representing the release version for this copy of the resume
     href: https://github.com/martibobby/bobbymartin.dev
+  # - alt: Badge representing the release date for this version of the resume
+  #   src: https://img.shields.io/github/release-date/martibobby/bobbymartin.dev
+  #   href: https://github.com/martibobby/bobbymartin.dev/releases
   - alt: GitHub badge representing whether the last automated build of this resume occurred
     src: https://github.com/martibobby/bobbymartin.dev/actions/workflows/build-pdf.yml/badge.svg
     href: https://github.com/martibobby/bobbymartin.dev/actions/workflows/build-pdf.yml
-  - alt: Built with Astro
-    src: https://astro.badg.es/v2/built-with-astro/tiny.svg
-    href: "https://astro.build"
+  # - alt: Built with Astro
+  #   src: https://astro.badg.es/v2/built-with-astro/tiny.svg
+  #   href: "https://astro.build"
+  # https://img.shields.io/github/release-date/martibobby/bobbymartin.dev
+  # https://img.shields.io/github/v/release/martibobby/bobbymartin.dev
+  # https://img.shields.io/github/commit-activity/t/martibobby/bobbymartin.dev?label=code%20commits
 
 contact:
   - name: address
@@ -39,76 +45,81 @@ experience:
       subtitle: Systematic Alpha Quant Team
       dates: "May 2022 - present"
       bullets:
-        - Author and architect of internal R package platform for quantitative factor building and analysis.
-        - Developed quantitative factors for use within the Systematic Alpha team's proprietary models.
-        - Optimized factor export by 300% compared to S&P's ClariFI Desktop application.
-        - Maintain Systematic Alpha's production environment, deployment, and processing in AWS.
-        - Publish reports, dashboards, and web apps for portfolio analysis and attribution.
-        # - Support analytic data warehouse; Migrated team from SVN->Git (Bitbucket -> GitHub)
+        - description: Author and maintainer of internal R package platform for quantitative factor building and analysis.
+          sub_bullets:
+            - Optimized factor calculation/export by over 500% compared to S&P's ClariFI Desktop application.
+            - Designed and architected factor definitions and transformations as code for greater flexibility.
+            - Engineered an analytic warehouse, centralizing over 12,000 point-in-time company metrics.
+        - description: Develop quantitative factors for use within the Systematic Alpha team's proprietary models.
+        - description: Maintain environments, deployments, and processing in AWS.
+        - description: Publish reports, dashboards, and web apps for portfolio analysis and attribution.
+        # - description: Support analytic data warehouse; Migrated team from SVN->Git (Bitbucket -> GitHub)
     - company:
       title: Application Engineer
       subtitle: Investments Data Hub Team
       dates: "Jan. 2020 - May 2022"
       bullets:
-        - Implemented CI/CD pipeline for MarkitEDM deploys increasing migrations by over 350%.
-        - Developed thriventprivateinvestments.com on AWS with S3 and CloudFront.
+        - description: Implemented CI/CD pipeline for MarkitEDM deploys increasing migrations by over 350%.
+        - description: Developed thriventprivateinvestments.com on AWS with S3 and CloudFront.
     - company:
       title: Associate Application Engineer
       subtitle: Back Office Support Team
       dates: "May 2018- Jan. 2020"
       bullets:
-        - Maintained critical internal/vendor systems for post-trade activity and reporting.
-        - Architected Power BI workspace implementation enabling self-service analytics.
+        - description: Maintained critical internal/vendor systems for post-trade activity and reporting.
+        - description: Architected Power BI workspace implementation enabling self-service analytics.
     - company: City of St. Paul
       title: Web Assistant Intern
       subtitle:
-      dates: "June 2017 - May 2018"
+      dates: "2017 - 2018"
       bullets:
-        - Digitized property inspection process with custom Microsoft PowerApp.
-        - Leveraged Drupal, HTML/SCSS, and GIT to improve stpaul.gov.
+        - description: Digitized property inspection process with custom Microsoft PowerApp.
+        - description: Leveraged Drupal, HTML/SCSS, and GIT to improve stpaul.gov.
     # - company: Risk Leadership Initiative
     #   title: Product Developer
     #   subtitle:
     #   dates: "June 2016 - May 2018"
     #   bullets:
-    #     - Drafted, designed, and launched new website with email campaigns that resulted in over 3500 new connections over 6 months. Strategized email content from metrics gathered on user engagement.
-    - company: University of St. Thomas
+    #     - description: Drafted, designed, and launched new website with email campaigns that resulted in over 3500 new connections over 6 months. Strategized email content from metrics gathered on user engagement.
+    - company: St. Thomas
       title: Teacher's Assistant
       subtitle: Mary Daugherty, CFA. Senior Fellow in Applied Finance
-      dates: "May 2015 - May 2018"
+      dates: "2015 - 2018"
       bullets:
-        - Analyzed Bloomberg data on over 200 companies for foreign asset tax implications.
+        - description: Analyzed Bloomberg data on over 200 companies for foreign asset tax implications.
     - company:
       title: Web Developer & Managing Intern
       subtitle:
-      dates: "Sept. 2014 - Jan. 2018"
+      dates: "2014 - 2018"
       bullets:
-        - Created websites and email campaigns for over 80 departments.
+        - description: Created websites and email campaigns for over 80 departments.
     # - company: Freelance
     #   title: Technology Consultant
     #   subtitle: Creative Hair Design, Handy Help, Ask the Nuns, Christina Capecchi
     #   dates: "May 2014 - December 2017"
     #   bullets:
-    #     - Developed unique brands, websites, and targeted email campaigns for MN-based groups.
-    #     - Implemented and maintained customer database of over 2000 clients.
+    #     - description: Developed unique brands, websites, and targeted email campaigns for MN-based groups.
+    #     - description: Implemented and maintained customer database of over 2000 clients.
 
 education:
   heading: Education
   # icon: bi-mortarboard
   degrees:
-    - uni: University of St. Thomas
+    - uni: University of St. Thomas (MN)
       class: Class of 2018
       major: Political Science & Information Systems
       subtitle: Double major
       callout:
         - name: Honors
           bullets:
-            - Full scholarship recipient. Dean's List 6 semesters.
+            - Full scholarship recipient. 
+            - Dean's List 6 semesters.
             - H.W. Ross Political Science Scholarship.
         - name: Leadership
           bullets:
             - VP of Public Relations, Student Government.
             - President, Sigma Chi Fraternity.
+            - Sophomore Class Senator, Student Government.
 
 accomplishments:
   heading: Accomplishments
@@ -120,29 +131,34 @@ accomplishments:
         - Assistant Scoutmaster, 2018.
     - name: Certifications
       bullets:
-        - Certified Scrum Product Owner (CSPO).
-        - Markit EDM - Basic & Advanced Training.
+        - Certified Scrum Product Owner.
+        - Bloomberg Market Concepts.
+        - Markit EDM Advanced Training.
     - name: Thrivent Leadership Training
       bullets:
-        - 1 of 30 selected for inaugural program.
+        - 1/30 selected for inaugural program.
 
 skills:
-  heading: Competencies
+  heading: Skills & Technologies
   # icon: bi-card-checklist
   callout:
-    - name: Software Development
+    - name: Programming & Development
       items:
-        - R Package Development
-        - Python/Java
-        - GitHub Actions
-        - Websites (Astro, Shiny)
-        - AWS
-        - Terraform
-    - name: Data Engineering
+        - R / Python
+        - Package Development
+        - Websites (Shiny, Astro, Django)
+        - Containerization (Docker)
+    - name: Data Engineering & Systems
       items:
-          - In-memory formats
-          - Multiprocessing
-          - Columnar databases
-          - ETL Tools (Markit EDM)
-          - Modeling (OLTP/OLAP)
-          - SQL query optimization
+        - Analytic Processing
+        - Data Modeling (OLTP, OLAP)
+        - Query Optimization
+        - Data Pipelines (ETL, ELT)
+    - name: Cloud & Infrastructure
+      items:
+        - AWS (IAM, EC2, S3, Bedrock)
+        - IaC (Terraform, Ansible)
+    - name: DevOps & Automation
+      items:
+        - CI/CD (GitHub Actions)
+        - Secrets Management

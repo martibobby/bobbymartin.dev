@@ -39,12 +39,12 @@ jobs:
             # Write github error annotation to show on job
             echo "::error title=misspellings-found::One or more misspellings found in resume.yml!"
             echo "::warning title=custom-dictionary::Do you need to update the custom dictionary found at .github/workflows/data/custom-dict?"          
-            status_code=0
+            status_code=1
           else
             # Write github annotation to show on job and exit
             echo "::notice::No misspellings found in ./src/data/resume.yml!"
             echo ":white_check_mark: Spell check passed!" >> $GITHUB_STEP_SUMMARY
-            status_code=1
+            status_code=0
           fi
       - name: Format misspellings as markdown table
         run: |

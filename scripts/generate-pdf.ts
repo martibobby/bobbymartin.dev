@@ -3,12 +3,13 @@ import puppeteer from 'puppeteer';
 
 async function generatePDF(url: string) {
     // Launch a new headless browser instance
-    const browser = await puppeteer.launch({
-        args: [
-            '--no-sandbox',
-            '--disable-setuid-sandbox'
-        ]
-    });
+    const browser = await puppeteer.launch();
+    // const browser = await puppeteer.launch({
+    //     args: [
+    //         '--no-sandbox',
+    //         '--disable-setuid-sandbox'
+    //     ]
+    // });
     // Create a new page
     const page = await browser.newPage();
     // Go to a webpage
@@ -16,7 +17,10 @@ async function generatePDF(url: string) {
     // Ignore 'print' CSS media type - use regular CSS types
     // await page.emulateMediaType('screen');
     // Generate PDF and save it
-    await page.pdf({ path: 'bobby_martin_resume.pdf', format: 'letter' });
+    await page.pdf({ path: 'bobby_martin_resume.pdf',
+         format: 'letter',
+          printBackground: true // Important for background colors/images
+     });
     // Close the browser
     await browser.close();
 }
