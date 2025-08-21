@@ -1,5 +1,5 @@
 name: Bobby Martin
-objective: Leveraging technology to optimize investment decision-making across asset classes.
+objective: Scaling portfolio research and management through innovative solutions
 
 badge:
   - src: https://img.shields.io/github/package-json/v/martibobby/bobbymartin.dev?style=flat&logoSize=auto
@@ -51,23 +51,28 @@ experience:
             - Designed and architected factor definitions and transformations as code for greater flexibility.
             - Engineered an analytic warehouse, centralizing over 12,000 point-in-time company metrics.
         - description: Develop quantitative factors for use within the Systematic Alpha team's proprietary models.
-        - description: Maintain environments, deployments, and processing in AWS.
-        - description: Publish reports, dashboards, and web apps for portfolio analysis and attribution.
+        - description: Maintain model environments, deployments, and processing in AWS.
+        - description: Create analytical workflows for historical backtests, portfolio construction, and attribution. 
         # - description: Support analytic data warehouse; Migrated team from SVN->Git (Bitbucket -> GitHub)
     - company:
       title: Application Engineer
       subtitle: Investments Data Hub Team
-      dates: "Jan. 2020 - May 2022"
+      dates: "Jan 2020 - May 2022"
       bullets:
-        - description: Implemented CI/CD pipeline for MarkitEDM deploys increasing migrations by over 350%.
-        - description: Developed thriventprivateinvestments.com on AWS with S3 and CloudFront.
+        - description: Developed a deep understanding of investment data as primary architect of 8 core mastered domains.
+        - description: Implemented programmatic access of data used in external client materials for Mutual Fund Marketing.
+        - description: Partnered with Fixed-Income analysts to create consumer loan dashboards in Python.
+        - description: Built dashboards for Mortgage analysts to monitor fund valuation, subs/reds, and allocation compliance.
+        - description: Improved Security Operations efficiency through workflow automation and custom applications. 
+        # - description: Provided high-quality security master data to Mixed Assets and Fundamental Equity teams.
     - company:
       title: Associate Application Engineer
       subtitle: Back Office Support Team
-      dates: "May 2018- Jan. 2020"
+      dates: "May 2018 - Jan 2020"
       bullets:
         - description: Maintained critical internal/vendor systems for post-trade activity and reporting.
-        - description: Architected Power BI workspace implementation enabling self-service analytics.
+        - description: Developed thriventprivateinvestments.com on AWS with S3 and CloudFront.
+        # - description: Architected Power BI workspace implementation enabling self-service analytics.
     - company: City of St. Paul
       title: Web Assistant Intern
       subtitle:
@@ -81,7 +86,7 @@ experience:
     #   dates: "June 2016 - May 2018"
     #   bullets:
     #     - description: Drafted, designed, and launched new website with email campaigns that resulted in over 3500 new connections over 6 months. Strategized email content from metrics gathered on user engagement.
-    - company: St. Thomas
+    - company: College
       title: Teacher's Assistant
       subtitle: Mary Daugherty, CFA. Senior Fellow in Applied Finance
       dates: "2015 - 2018"
@@ -131,9 +136,9 @@ accomplishments:
         - Assistant Scoutmaster, 2018.
     - name: Certifications
       bullets:
-        - Certified Scrum Product Owner.
         - Bloomberg Market Concepts.
-        - Markit EDM Advanced Training.
+        - Certified Scrum Product Owner.
+        # - Markit EDM Advanced Training.
     - name: Thrivent Leadership Training
       bullets:
         - 1/30 selected for inaugural program.
@@ -146,14 +151,14 @@ skills:
       items:
         - R / Python
         - Package Development
-        - Websites (Shiny, Astro, Django)
+        - Model Development/Deployment
         - Containerization (Docker)
-    - name: Data Engineering & Systems
+    - name: Data Proficiency
       items:
-        - Analytic Processing
-        - Data Modeling (OLTP, OLAP)
-        - Query Optimization
+        - Investment Data Modeling
+        - Columnar Analytic Processing
         - Data Pipelines (ETL, ELT)
+        - Dashboards (Shiny, Astro, Django)
     - name: Cloud & Infrastructure
       items:
         - AWS (IAM, EC2, S3, Bedrock)
